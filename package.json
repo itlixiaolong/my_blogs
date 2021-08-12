@@ -1,0 +1,17 @@
+{
+  "name": "vuepress_docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-auto-sidebar": "^2.3.2"
+  }
+}
