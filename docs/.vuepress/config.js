@@ -23,7 +23,7 @@ module.exports = {
         items: [
           { text: 'node常见用法', link: '/node/use/' },
           { text: 'npm的常见用法', link: '/node/npm_use' },
-          { text: '好用的node包', link: '/node/packages' },
+          { text: '好用的node包', link: '/node/packages/minimist/' },
         ]
       },
       {
