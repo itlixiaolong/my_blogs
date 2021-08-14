@@ -1,2 +1,2 @@
 var shell = require('shelljs');
-cp('-R', 'docs/.vuepress/dist', '/root/');
+shell.cp('-R', 'docs/.vuepress/dist', '/root/');
