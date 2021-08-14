@@ -5,12 +5,15 @@
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "deploy": "node auto_deploy.js"
   },
   "devDependencies": {
+    "@babel/helper-validator-option": "^7.14.5",
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "shelljs": "^0.8.4",
     "vuepress": "^1.8.2",
     "vuepress-plugin-auto-sidebar": "^2.3.2"
   }
