@@ -106,7 +106,7 @@ module.exports = {
   },
   plugins:[
     ["vuepress-plugin-auto-sidebar", {
-      sidebarDepth: 2,
+      sidebarDepth: 1,
       title: {
         // 更多选项: 
         // `default`、`lowercase`、`uppercase`、`capitalize`、`camelcase`、`kebabcase`、`titlecase`

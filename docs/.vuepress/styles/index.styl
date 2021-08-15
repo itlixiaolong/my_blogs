@@ -1,0 +1,22 @@
+// .sidebar-group a.sidebar-link[aria-current="page"]:first-child:not(.active){
+//   font-size: 1.5em;
+//   // padding-left: 1rem;
+//   color: #ff00d7;
+// }
+
+.sidebar-group a.sidebar-link[aria-current="page"]{
+  &:first-child:not(.active){
+  font-size: 1.5em;
+  // padding-left: 1rem;
+  color: #ff00d7;
+}
+&.active{
+    transition: all  0.3s ease;
+    font-size: 1.3em;
+  }
+//   &:first-child.active{
+//     font-size: 1.5em;
+//     // padding-left: 1rem;
+//     color: #ff00d7;
+//   }
+}

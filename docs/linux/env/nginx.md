@@ -1,16 +1,16 @@
 
 
-# :open_book: nginx的安装
+# :green_book: nginx的安装
 
 
-## :surfing_man:安装nginx
+## :paintbrush:安装nginx
 >命令行运行
 ```sh
 yum install nginx
 
 ```
 
-## :surfing_man:2.nginx的常用命令
+## :paintbrush:2.nginx的常用命令
 >命令行运行
 ```sh 
 nginx -h

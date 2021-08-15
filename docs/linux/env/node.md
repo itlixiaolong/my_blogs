@@ -1,4 +1,4 @@
-# :open_book: node的安装
+# :green_book: node的安装
 
 
 ## :paintbrush:1.首先安装nvm
@@ -24,3 +24,4 @@ Example:
   nvm alias default node                Always default to the latest available node version on a shell
 ```
 命令详情: 终端运行`nvm`
+

@@ -1,18 +1,18 @@
-# :open_book: zsh的安装
+# :green_book: zsh的安装
 
 
-## :running_woman:1.首先安装nvm
+## :paintbrush:1.安装zsh
 >命令行运行
 ```sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ```
 ```sh
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
-[传送门](https://github.com/nvm-sh/nvm/blob/master/README.md)
+[传送门](https://ohmyz.sh/#install)
 
-## :running_woman:2.首先安装node
+## :paintbrush:2.配置Oh My ZSH!
 >命令行运行
 ```sh 
 Example:

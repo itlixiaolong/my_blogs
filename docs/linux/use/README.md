@@ -1,4 +1,4 @@
-# :books:linux根目录
+# :books:linux环境使用目录
 
 :four_leaf_clover: 1.[nginx的使用](./nginx.md)
 
