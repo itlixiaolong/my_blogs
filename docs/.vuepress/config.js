@@ -80,6 +80,14 @@ module.exports = {
           { text: 'chrome的插件开发', link: '/chorme/extentions/' },
         ]
       },
+      {
+        text: 'Linux',
+        ariaLabel: 'Linux',
+        items: [
+          { text: 'linux环境的安装', link: '/linux/env/' },
+          { text: 'linux常用命令', link: '/linux/use/' },
+        ]
+      },
       { text: '前端趋势', link: '/future/' },
       { text: '前端面试', link: '/interview/' },
       {
@@ -98,6 +106,7 @@ module.exports = {
   },
   plugins:[
     ["vuepress-plugin-auto-sidebar", {
+      sidebarDepth: 2,
       title: {
         // 更多选项: 
         // `default`、`lowercase`、`uppercase`、`capitalize`、`camelcase`、`kebabcase`、`titlecase`
