@@ -5,7 +5,7 @@
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200220113840530.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022011405441.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70)
 
-## :paintbrush: 语法: find [路径] [选项] [操作]
+## :paperclip: 语法: find [路径] [选项] [操作]
 > 选项
 
 参数|意义|例子|---|---|
@@ -36,7 +36,7 @@ mmin  |按文件修改时间进行查询(单位是分)|find /etc -mmin [n]|
 --|n|n天修改的文件|
 -mindepth n|从n级子目录开始搜索|find /etc -mindepth 3 -name 'index.js'|从etc目录的3级子目录开始查找index.js
 -maxdepth n|最多搜索到n-1级子目录|find /etc -maxdepth 3 -name 'index.js'|最多搜索etc目录的2级子目录查找index.js
-## :paintbrush: 操作
+## :paperclip: 操作
 
 |参数|意义|
 ---|---|---

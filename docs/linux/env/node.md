@@ -1,7 +1,7 @@
 # :green_book: node的安装
 
 
-## :paintbrush:1.首先安装nvm
+## :paperclip:1.首先安装nvm
 >命令行运行
 ```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
@@ -12,7 +12,7 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 ```
 [传送门](https://github.com/nvm-sh/nvm/blob/master/README.md)
 
-## :paintbrush:2.首先安装node
+## :paperclip:2.首先安装node
 >命令行运行
 ```sh 
 Example:

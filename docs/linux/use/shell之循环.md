@@ -1,7 +1,7 @@
 # :green_book: shell之循环
 
 # for循环和while循环
-## :paintbrush: 1.for循环
+## :paperclip: 1.for循环
 ```sh
 for 参数 in 列表
 do 执行的命令
@@ -35,7 +35,7 @@ for ((i=0;i<=10;i++))
 > echo $i
 > done
 ```
-## :paintbrush: 2.while循环
+## :paperclip: 2.while循环
 ```sh
 while test 测试是否成立
 do
@@ -46,14 +46,14 @@ done
 aa=1
 while [ $aa -lt 10 ]; do ((aa++)); echo $aa; done
 ```
-## :paintbrush: 3.until循环
+## :paperclip: 3.until循环
 until循环与while循环相反,循环测试为假时,执行循环,为真时循环停止
 ```sh
 //例子
 aa=10
 while [ $aa -lt 1]; do ((aa--)); echo $aa; done
 ```
-## :paintbrush: 4.需求实例
+## :paperclip: 4.需求实例
 1.获取用户调用脚本时时的参数,如果用户输入了help参数,输出help help
 ```sh
 for pos in $*

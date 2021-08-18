@@ -4,7 +4,7 @@
 > 函数的定义
 
 函数是包含着重复命令的集合
-## :paintbrush: 1.自定义函数
+## :paperclip: 1.自定义函数
 - 函数的定义
 ```sh
 function fun_name(){
@@ -41,7 +41,7 @@ return 1
     
 }
 ```
-## :paintbrush: 2.系统函数
+## :paperclip: 2.系统函数
 - 系统自建了函数库,可以在脚本中引用,位置在 `/etc/init.d/functions`可使用 
 ```sh
 source /etc/init.d/functions 或者 . /etc/init.d/functions

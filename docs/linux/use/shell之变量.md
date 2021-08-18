@@ -1,13 +1,13 @@
 # :green_book: shell之变量
 
-## :paintbrush: shell脚本编写规范
+## :paperclip: shell脚本编写规范
 1.一条命令只做一件事
 
 2.为了组合命令和多次执行,使用脚本文件来保存需要执行的命令
 
 3.赋予该文件的执行权限(`chmod u+rx fileName`)
 
-## :paintbrush: shell脚本的运行
+## :paperclip: shell脚本的运行
 
 1.在bash下开启一个子进程运行代码(bash运行,执行完不影响当前目录)
 
@@ -22,7 +22,7 @@
 - `. fileName.sh`
 
 
-## :paintbrush: shell脚本编写的变量
+## :paperclip: shell脚本编写的变量
 
 ##### 1.变量的命名
 - 字母数字下划线,不能用数字开头
@@ -237,7 +237,7 @@ pos1=$1
 pos2=${2-_} //如果第二个参数不传我们就使用_作为默认值
 
 ```
-## :paintbrush: shell脚本中的数组
+## :paperclip: shell脚本中的数组
 #### 1.数组的定义
 ```sh
 ips=(10.0.0.1 10.0.0.2 10.0.0.3)

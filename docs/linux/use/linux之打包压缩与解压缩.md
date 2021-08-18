@@ -1,6 +1,6 @@
 # :green_book: linux之打包压缩与解压缩
 
-## :paintbrush: 1. 打包命令 tar [-(c|x)f] 
+## :paperclip: 1. 打包命令 tar [-(c|x)f] 
  - -c 生成一个新的包
  - -z 使用gzip对打完的包进行压缩[压缩率低,快]
  - -j 使用bzip2对打完的包进行压缩[压缩率高,慢]

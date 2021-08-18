@@ -1,6 +1,6 @@
 # :green_book: code-server的安装
 
-## :paintbrush:1.首先安装nvm
+## :paperclip:1.首先安装nvm
 >命令行运行
 ```sh
 curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
@@ -8,7 +8,7 @@ curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
 ```
 [传送门](https://github.com/cdr/code-server)
 
-## :paintbrush:2.安装完成后,显示
+## :paperclip:2.安装完成后,显示
 ```sh
 ➜  ~ curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
 

@@ -1,5 +1,5 @@
 # :green_book: shell之环境变量配置文件
-## :paintbrush: 1.配置文件的存放地址
+## :paperclip: 1.配置文件的存放地址
 - `/etc/profile`
 
 - `/etc/profile.d/` 目录
@@ -14,7 +14,7 @@
 
 ~/开头的配置只对当前用户生效
 
-## :paintbrush: 2.配置文件的加载顺序:
+## :paperclip: 2.配置文件的加载顺序:
 1.当使用 [su - 用户名] 登录时,配置文件的加载顺序如下
 ```sh
 /etc/profile
@@ -34,7 +34,7 @@
  /etc/bashrc
 ```
 
-## :paintbrush: 3.PATH环境变量量以及常⽤用快捷键 
+## :paperclip: 3.PATH环境变量量以及常⽤用快捷键 
 - `echo $PATH`查看当前环境变量量
 - `export PATH=$PATH:/home/ubuntu/` 临时设置环境变量量，当前会话有效
 - `~/.bashrc`⽂文件最末添加命令设置环境变量量，然后重启shell，永久有效 

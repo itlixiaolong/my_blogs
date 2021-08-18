@@ -1,12 +1,12 @@
 # :green_book: shell之测试命令
 # 测试命令test
-## :paintbrush: 1.test命令用于检查文件或者比较值
-## :paintbrush: 2.test可以用于以下测试
+## :paperclip: 1.test命令用于检查文件或者比较值
+## :paperclip: 2.test可以用于以下测试
 - 文件测试
 - 整数比较测试
 - 字符串测试
-## :paintbrush: 3.test测试语句可以简化为[]符号
-## :paintbrush: 4.[]还有扩展写法[[]],支持&& || ! < >
+## :paperclip: 3.test测试语句可以简化为[]符号
+## :paperclip: 4.[]还有扩展写法[[]],支持&& || ! < >
 ```sh
 test -f /etc/password
 echo $?

@@ -3,7 +3,7 @@
 # :green_book: nginx的使用
 
 
-## :paintbrush:nginx的默认配置
+## :paperclip:nginx的默认配置
 ```sh
 #user  nobody;
 worker_processes  1;

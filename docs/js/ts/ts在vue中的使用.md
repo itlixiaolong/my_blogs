@@ -1,6 +1,6 @@
 # :green_book: vue中使用ts
 
-## :paintbrush: 1.使用typeof 生成类型定义
+## :paperclip: 1.使用typeof 生成类型定义
 - 我们一般先定义类型，再使用：
 ```js
 interface Opt {
@@ -19,7 +19,7 @@ type Opt = typeof defaultOption
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210205234915708.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70)
 >当一个 interface 总有一个字面量初始值时，可以考虑这种写法以减少重复代码，至少减少了两行代码
-## :paintbrush: 2.使用keyof或者属性的名称
+## :paperclip: 2.使用keyof或者属性的名称
 >TypeScript 允许我们遍历某种类型的属性，并通过 keyof 操作符提取其属性的名称。
 
 >keyof 操作符是在 TypeScript 2.1 版本引入的，该操作符可以用于获取某种类型的所有键，其返回类型是联合类型。
@@ -51,7 +51,7 @@ function get<T extends object, K extends keyof T>(o: T, name: K): T[K] {
 }
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210205235314996.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70)
-## :paintbrush: 3.使用查找类型
+## :paperclip: 3.使用查找类型
 ```js
 interface Person {
     addr: {
@@ -83,7 +83,7 @@ const addr: Person["addr"] = {
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210205235558716.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70)
 >有些场合后者会让代码更整洁、易读
-## :paintbrush: 4.查找类型+泛型+keyof
+## :paperclip: 4.查找类型+泛型+keyof
 >泛型（Generics）是指在定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再指定类型的一种特性
 ```js
 interface API {
@@ -98,7 +98,7 @@ get('');
 get('/menu').then(user => user.foods);
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210205235733998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70)
-## :paintbrush: 5.类型断言
+## :paperclip: 5.类型断言
 >Vue 组件里面经常会用到 ref 来获取子组件的属性或者方法，但是往往都推断不出来有啥属性与方法，还会报错。
 ```js
 <template>
@@ -144,7 +144,7 @@ export default class Home extends Vue {
 >但是类型断言为 any 时是不好的，如果知道具体的类型，写具体的类型才好，不然引入 TypeScript 冒似没什么意义了。
 
 
-## :paintbrush: 6.显示泛型
+## :paperclip: 6.显示泛型
 >$('button') 是个 DOM 元素选择器，可是返回值的类型是运行时才能确定的，除了返回 any ，还可以
 ```js
 function $<T extends HTMLElement>(id: string): T {
@@ -162,7 +162,7 @@ console.log('input.value: ', input.value);
 >函数泛型不一定非得自动推导出类型，有时候显式指定类型就好。
 
 
-## :paintbrush: 7.DeepReadonly
+## :paperclip: 7.DeepReadonly
 >被 readonly 标记的属性只能在声明时或类的构造函数中赋值。
 
 >之后将不可改（即只读属性），否则会抛出 TS2540 错误。
@@ -182,7 +182,7 @@ b.foo.bar = 33 // Cannot assign to 'bar' because it is a read-only property.ts(2
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210206000248829.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70)
 
 
-## :paintbrush: 8.使用/** */注释编辑器会有很好的提示
+## :paperclip: 8.使用/** */注释编辑器会有很好的提示
 
 ```
 /** This is a cool guy. */
@@ -198,7 +198,7 @@ const p: Person = {
 >如果想给某个属性添加注释说明或者友好提示，这种是很好的方式了。
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210206000526565.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70)
-## :paintbrush: 9.接口继承
+## :paperclip: 9.接口继承
 >和类一样，接口也可以相互继承。
 
 >这让我们能够从一个接口里复制成员到另一个接口里，可以更灵活地将接口分割到可重用的模块里
@@ -207,7 +207,7 @@ const p: Person = {
 >一个接口可以继承多个接口，创建出多个接口的合成接口。
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210206000804854.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70)
-## :paintbrush: 10. interface& type
+## :paperclip: 10. interface& type
 >TypeScript 中定义类型的两种方式：接口（interface）和 类型别名（type alias）。
 
 -比如下面的 Interface 和 Type alias 的例子中，除了语法，意思是一样的：

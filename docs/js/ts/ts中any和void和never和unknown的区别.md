@@ -1,10 +1,11 @@
 # :green_book: any、void、never、unknown的区别
-## :paintbrush: 1.含义区别
+
+## :paperclip: 1.含义区别
 --|any | void |never|unknown
 ---|---|---|---|---
 含义|任何类型|没有类型|永不存在的值的类型|未知的类型
 使用场景|1.为在编程阶段还不清楚类型的变量指定一个类型<br><br>2.在为旧代码添加ts时，需要编辑器跳过类型校验的时候|当一个函数没有返回值时，返回类型为void|1.throw error的函数返回值类型为never<br><br>2.死循环的函数返回值为never|不知道未来的类型,不会丢失类型校验
-## :paintbrush: 2.使用实例
+## :paperclip: 2.使用实例
 
 - any
 ```

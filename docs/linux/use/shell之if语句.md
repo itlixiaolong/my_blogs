@@ -1,7 +1,7 @@
 # :green_book: shell之if语句
 
 ### if条件判断语句
-## :paintbrush: 1.if-then语句的基本用法
+## :paperclip: 1.if-then语句的基本用法
 ```sh
 if[测试条件是否成立] 或者 命令返回值是否为0
 then 执行相应的命令
@@ -17,7 +17,7 @@ fi 结束
 /root
 pwd命令执行成功
 ```
-## :paintbrush: 2.if-then-else语句的基本用法
+## :paperclip: 2.if-then-else语句的基本用法
 ```sh
 if[测试条件是否成立]
 then 执行相应的命令
@@ -37,7 +37,7 @@ fi 结束
 0
 ```
 
-## :paintbrush: 3.if-elif-else语句的基本用法
+## :paperclip: 3.if-elif-else语句的基本用法
 ```sh
 if [测试条件是否成立]
 then 执行相应的命令
@@ -56,7 +56,7 @@ esle
 fi
 
 ```
-## :paintbrush: if条件判断语句的嵌套
+## :paperclip: if条件判断语句的嵌套
 ```sh
 if [测试条件是否成立]
     if [测试条件是否成立]

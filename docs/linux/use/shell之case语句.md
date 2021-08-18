@@ -1,6 +1,6 @@
 # :green_book: shell之case语句
 
-## :paintbrush: case语句和select语句可以构成分支
+## :paperclip: case语句和select语句可以构成分支
 ```sh
 case "$变量名" in
     "情况1" )

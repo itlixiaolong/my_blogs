@@ -8,4 +8,4 @@
 
 :four_leaf_clover: 4.[any、void、never、unknown的区别](./use/any_void_never_unknown_difference.md)
 
-:four_leaf_clover: 5.[ts编程](./use/program.md)
+:four_leaf_clover: 5.[ts编程资源](./use/program.md)
