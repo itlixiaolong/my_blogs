@@ -65,6 +65,3 @@ docker stop\start\restart jenkins
 
 - [windows上使用jenkins自动化打包部署Vue项目，详细教程](https://blog.csdn.net/cxx619/article/details/92833024)
 
-
-
-gitee令牌:e27044ce32c544dcac21dad9c7a889f1
