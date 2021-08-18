@@ -54,7 +54,17 @@ docker stop\start\restart jenkins
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/df2d8860779c428e9ec9380209f7e34e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70)
 
 ## :paperclip: 4.后面的步骤参考
-[相关链接](https://www.jenkins.io/zh/doc/tutorials/build-a-node-js-and-react-app-with-npm/#setup-wizard)
+[jenkins官方教程](https://www.jenkins.io/zh/doc/tutorials/build-a-node-js-and-react-app-with-npm/#setup-wizard)
+
+## :paperclip: 5.参考资料
+- [使用jenkins一键打包发布vue项目](https://www.cnblogs.com/guojikun/p/14749634.html)
+
+- [Jenkins & Gitee 实现持续集成CI/CD工具【免费、推荐】](https://blog.csdn.net/zy1281539626/article/details/115180811)
+
+- [使用jenkins自动化打包部署Vue项目，详细教程](https://www.jianshu.com/p/1d07b986ab2c)
+
+- [windows上使用jenkins自动化打包部署Vue项目，详细教程](https://blog.csdn.net/cxx619/article/details/92833024)
+
 
 
 gitee令牌:e27044ce32c544dcac21dad9c7a889f1
