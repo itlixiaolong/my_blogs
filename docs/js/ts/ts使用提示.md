@@ -1,6 +1,6 @@
 # :green_book: ts使用Tip
 
-## :paintbrush: 1.使用参数默认值代替||表达式
+## :paperclip: 1.使用参数默认值代替||表达式
 ```ts
 //错误:
 function createBlogPost(text: string, author: string, date?: Date) {
@@ -19,7 +19,7 @@ function createBlogPost(text: string, author: string, date: Date = new Date()) {
   }
 }
 ```
-## :paintbrush: 2.使用unknown类型代替any
+## :paperclip: 2.使用unknown类型代替any
 ```ts
 interface Product {
   id: string;
@@ -39,7 +39,7 @@ async function loadProducts(): Promise<Product[]> {
 }
 
 ```
-## :paintbrush: 3.使用类型守卫( type guard )代替强制类型推断(as)
+## :paperclip: 3.使用类型守卫( type guard )代替强制类型推断(as)
 ```ts
 interface Product {
   id: string;
@@ -75,7 +75,7 @@ async function loadProducts(): Promise<Product[]> {
 ```
 [ type guard 参考 ](https://blog.csdn.net/u010730126/article/details/107402749)
 
-## :paintbrush: 4.编写测试用例时,创建mock数据代替any
+## :paperclip: 4.编写测试用例时,创建mock数据代替any
 ```ts
 interface User {
   id: string;
@@ -103,7 +103,7 @@ test('createEmailText returns text that greats the user by first name', () => {
 
 ```
 
-## :paintbrush: 5.使用组合接口代替接口的可选属性,让数组模型固定
+## :paperclip: 5.使用组合接口代替接口的可选属性,让数组模型固定
 ```ts
 //错误
 interface Product {
@@ -128,7 +128,7 @@ interface PhysicalProduct extends Product {
 }
 
 ```
-## :paintbrush: 6.使用有明确含义的单词代替单字母的泛型
+## :paperclip: 6.使用有明确含义的单词代替单字母的泛型
 ```ts
 //错误
 function head(arr: T[]): T | undefined {
@@ -142,7 +142,7 @@ function head(arr: Element[]): Element | undefined {
 
 
 ```
-## :paintbrush: 7.使用if语句判断布尔值时,明确我们想要判断的情况
+## :paperclip: 7.使用if语句判断布尔值时,明确我们想要判断的情况
 ```ts
 //错误
 function createNewMessagesResponse(countOfNewMessages?: number) {
@@ -170,7 +170,7 @@ function createNewMessagesResponse(countOfNewMessages?: number) {
 
 ```
 
-## :paintbrush: 8.判断不是null或者undefined的时候,明确我们想要判断的类型
+## :paperclip: 8.判断不是null或者undefined的时候,明确我们想要判断的类型
 ```ts
 //错误
 function createNewMessagesResponse(countOfNewMessages?: number) {

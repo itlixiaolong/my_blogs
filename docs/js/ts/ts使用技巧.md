@@ -1,9 +1,9 @@
 # :green_book: ts使用概要
-## :paintbrush: 1.对于一个变量我希望它既可以是string也可以是number类型,这是就用到了联合类型 用符号 | 表示
+## :paperclip: 1.对于一个变量我希望它既可以是string也可以是number类型,这是就用到了联合类型 用符号 | 表示
 ```
 let a:string | number=7
 ```
-## :paintbrush: 2.对于对象需要利用接口,理论上接口形状一旦定义就不能多也不能少,但是可以通过添加?变成可选属性来解决,可选属性的含义是该属性可以不存在
+## :paperclip: 2.对于对象需要利用接口,理论上接口形状一旦定义就不能多也不能少,但是可以通过添加?变成可选属性来解决,可选属性的含义是该属性可以不存在
 这时仍然不允许添加未定义的属性：
 ```
 interface IPerson{
@@ -13,7 +13,7 @@ interface IPerson{
 }
 
 ```
-## :paintbrush: 3.数组的定义:==类型+[]==  或者 使用==接口定义数组==
+## :paperclip: 3.数组的定义:==类型+[]==  或者 使用==接口定义数组==
 ```
 let arr:number[]=[1,2]
 let arr:string[]=['1','2']
@@ -62,7 +62,7 @@ let arr:(string|number)[]=['1234',12]
 let arr:[string,number]=['1',2]
 
 ```
-## :paintbrush: 4.命名空间
+## :paperclip: 4.命名空间
 在代码量较大的情况下，为了避免各种变量命名相冲突，可将相似功能的函数、类、接口等放置到命名空间内
 TypeScript的命名空间可以将代码包裹起来，只对外暴露需要在外部访问的对象。
 
@@ -111,7 +111,7 @@ export namespace B {
 ```
 
 
-## :paintbrush: 5.函数的定义
+## :paperclip: 5.函数的定义
 
 ```
 function sum(x:number,y:number):number{
@@ -130,7 +130,7 @@ const sum:ISumFn=(x:number,y:number):number{
 
 ```
 
-## :paintbrush: 6.泛型
+## :paperclip: 6.泛型
 
 - 6.1 泛型中数组的使用
 
@@ -261,7 +261,7 @@ let a:unionTypes = 1
 let a：string | number | boolean = 1
 ```
 
-## :paintbrush: 7.接口
+## :paperclip: 7.接口
 - 7.1 可索引接口
 > 约束数组
 ```js
@@ -324,9 +324,9 @@ superMan.code();
 
 
 ```
-## :paintbrush:注：以下都可以“欺骗”编译器跳过语法检查
+## :paperclip:注：以下都可以“欺骗”编译器跳过语法检查
 
-## :paintbrush: 8.使用注释屏蔽ts的校验
+## :paperclip: 8.使用注释屏蔽ts的校验
 
 - 单行忽略
 ```
@@ -351,7 +351,7 @@ const num2: number = 200
 // @ts-ignore
 num2.substr() // Ok 语法检查通过
 ```
-## :paintbrush: 9.当你确定一个类型可以使用as语法告诉ts不需要做类型校验了
+## :paperclip: 9.当你确定一个类型可以使用as语法告诉ts不需要做类型校验了
 
 ```
 let fn=(test as any).fun
@@ -413,7 +413,7 @@ function addObj(first: object | NumberObj, second: object | NumberObj) {
   return 0;
 }
 ```
-## :paintbrush: 10.使用非空断言操作符 !排除值为 null undefined的情况
+## :paperclip: 10.使用非空断言操作符 !排除值为 null undefined的情况
 
 >即告诉编译器：xx 变量肯定不是 null 或 undefined ，你放心吧～
 
@@ -443,7 +443,7 @@ console.log(a) // Error - Variable 'n' is used before being assigned.
 let b!: number
 console.log(b) // OK - `!` 表示，你会给 b 一个赋值，不用编译器关心
 ```
-## :paintbrush: 11.Ts中时间的类型
+## :paperclip: 11.Ts中时间的类型
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210329185402197.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70)
 

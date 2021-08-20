@@ -3,14 +3,14 @@
 # :green_book: nginx的安装
 
 
-## :paintbrush:安装nginx
+## :paperclip:安装nginx
 >命令行运行
 ```sh
 yum install nginx
 
 ```
 
-## :paintbrush:2.nginx的常用命令
+## :paperclip:2.nginx的常用命令
 >命令行运行
 ```sh 
 nginx -h

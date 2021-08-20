@@ -1,7 +1,7 @@
 # :green_book: zsh的安装
 
 
-## :paintbrush:1.安装zsh
+## :paperclip:1.安装zsh
 >命令行运行
 ```sh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -12,7 +12,7 @@ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O 
 ```
 [传送门](https://ohmyz.sh/#install)
 
-## :paintbrush:2.配置Oh My ZSH!
+## :paperclip:2.配置Oh My ZSH!
 >命令行运行
 ```sh 
 Example:

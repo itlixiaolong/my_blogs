@@ -1,6 +1,6 @@
 # :green_book: linux基本命令操作
 
-## :paintbrush: 1.grep "some string" file
+## :paperclip: 1.grep "some string" file
 
 <1> .grep命令在每个文件中搜索模式。它还会寻找由换行符分隔的模式，并且grep打印与模式匹配的每一行。
 
@@ -40,7 +40,7 @@ grep -B 4 mox nginx.conf
 grep -C 4 mox nginx.conf 
 
 ```
-## :paintbrush: 2. cat
+## :paperclip: 2. cat
 cat命令具有与文本文件有关的三个相关功能：
 
 - 显示它们
@@ -51,13 +51,13 @@ cat命令具有与文本文件有关的三个相关功能：
 cat index.js //读取index.js中的内容
 cat index.js > test.js //把index.js的内容复制到test.js中
 ```
-## :paintbrush: 3. echo
+## :paperclip: 3. echo
 echo用于向终端输出文本
 ```
 echo "test text"
 
 ```
-## :paintbrush: 3. touch
+## :paperclip: 3. touch
 touch用于创建新的空文件
 ```
 touch text.js
@@ -69,7 +69,7 @@ touch text.js
 - touch 创建一个没有任何内容或空文件的文件。请记住，使用touch命令创建的文件为空。当用户在创建文件时没有要存储的数据时，此命令很有用。
 
 
-## :paintbrush: 4. tail someFile
+## :paperclip: 4. tail someFile
 
 tail命令读取文件并输出文件的最后部分（尾巴）
 
@@ -77,7 +77,7 @@ tail命令读取文件并输出文件的最后部分（尾巴）
 tail text.js
 
 ```
-## :paintbrush: 5. find path -name filename
+## :paperclip: 5. find path -name filename
 
 使用find命令可以快速查找文件或目录。当您正在处理包含数百个文件和多个目录的大型项目时，此功能非常有用
 ```
@@ -85,20 +85,20 @@ find . -name text.js //在当前目录下查找text.js
 find . -name "*.js" //在当前目录下查找所有的js文件
 
 ```
-## :paintbrush: 6. mv somefile /to/some/other/path
+## :paperclip: 6. mv somefile /to/some/other/path
 mv命令将文件或目录从一个位置移动到另一个位置。mv命令支持移动单个文件，多个文件和目录
 
 ```
 mv index.js ../utils  //把当前目录下的index.js移动到上一级的utils目录下
 ```
 
-## :paintbrush: 7. ln [-s] 真正要打开的文件地址 存放快捷方式的地址
+## :paperclip: 7. ln [-s] 真正要打开的文件地址 存放快捷方式的地址
 
 ```
 <!--为/etc/hosts文件创建一个软链接到~/hosts目录下,这时执行cd ~/hosts实际就会打开 cd /etc/hosts-->
 ln -s /etc/hosts ~/hosts 
 ```
-## :paintbrush: 8. ls [-a|d|l]  要查看目录
+## :paperclip: 8. ls [-a|d|l]  要查看目录
 - -a ：全部的文件，连同隐藏文件( 开头为 . 的文件) 一起列出来(常用)
 - -d ：仅列出目录本身，而不是列出目录内的文件数据(常用)
 - -l ：长数据串列出，包含文件的属性与权限等等数据；(常用)
@@ -118,7 +118,7 @@ ls -d ~
 ls -al ~  
 ```
 
-## :paintbrush: 9. pwd [-P]  显示目前所在的目录
+## :paperclip: 9. pwd [-P]  显示目前所在的目录
 - -P ：显示出确实的路径，而非使用连结 (link) 路径
 
 
@@ -138,7 +138,7 @@ lrwxrwxrwx 1 root root 10 Sep  4 17:54 /var/mail -> spool/mail
 <!--所以，加上 pwd -P 的选项后，会不以连结档的数据显示，而是显示正确的完整路径啊！ -->
 
 ```
-## :paintbrush:10.获取某个目录下文件的个数
+## :paperclip:10.获取某个目录下文件的个数
 - 如果只是想得到当前目录下（不包括子目录）的相关文件时用
 ```
 ls -l | grep "^-" | wc -l 
