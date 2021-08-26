@@ -1,13 +1,6 @@
+# :green_book: css根目录
 
-# css_home
 
-<test/>
-{{$page}}
+:four_leaf_clover: 1.[3d环绕效果](./3d环绕效果.md)
 
-<style scoped lang="less">
-.test {
-/* less */
-color:blue;
-font-size:40px;
-}
-</style>
+:four_leaf_clover: 2.[BEM规范](./BEM规范.md)
