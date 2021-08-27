@@ -15,6 +15,7 @@ module.exports = {
         items: [
           { text: '命令行工具配置及使用', link: '/utils/cmd_cli/' },
           { text: 'mac常见软件安装及使用', link: '/utils/mac_software/' },
+          { text: '搜索引擎和github的搜索技巧', link: '/utils/search_skills/' },
         ]
       },
       {
