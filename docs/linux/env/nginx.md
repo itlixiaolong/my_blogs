@@ -1,5 +1,3 @@
-
-
 # :green_book: nginx的安装
 
 
