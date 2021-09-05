@@ -95,95 +95,7 @@ BEM (Block, Element, Modifier)是一个基于组件化思想的前端开发方�
 </form>
 ```
 
-#### 嵌套
-- Elements可以相互嵌套。
-- 您可以有任意数量的嵌套级别。
-- 一个元素总是一个块的一部分，而不是另一个元素。这意味着元素名称不能是一个级联的结构，如block__elem1__elem2。
-##### 例子
-```html
-<!--
-    Correct. element的名字结构符合规范: `block-name__element-name`
--->
-<form class="search-form">
-    <div class="search-form__content">
-        <input class="search-form__input">
 
-        <button class="search-form__button">Search</button>
-    </div>
-</form>
-
-<!--
-    Incorrect. element的名字结构不符合规范`block-name__element-name`
--->
-<form class="search-form">
-    <div class="search-form__content">
-        <!-- Recommended: `search-form__input` or `search-form__content-input` -->
-        <input class="search-form__content__input">
-
-        <!-- Recommended: `search-form__button` or `search-form__content-button` -->
-        <button class="search-form__content__button">Search</button>
-    </div>
-</form>
-```
-**提示:** 块名称定义命名空间，它保证元素是依赖于块的（block__elem）。
-> 1.在dom树中,一个block是可以拥有多个嵌套的element的
-```html
-<div class="block">
-    <div class="block__elem1">
-        <div class="block__elem2">
-            <div class="block__elem3"></div>
-        </div>
-    </div>
-</div>
-
-```
-但是在BEM的规范中,这个Block的结构始终是平铺的一个list列表
-```css
-.block {}
-.block__elem1 {}
-.block__elem2 {}
-.block__elem3 {}
-```
-这允许你改变一个Block的DOM结构，而不需要对每个单独的元素的样式进行修改。
-比如,你修改DOM结构如下
-```html
-<div class="block">
-    <div class="block__elem1">
-        <div class="block__elem2"></div>
-    </div>
-
-    <div class="block__elem3"></div>
-</div>
-```
-这是Block的DOM结构变化了,但是样式代码无需修改,同样有效
-
-#### 从属性
-- 一个element总是一个block的一部分，你不应该脱离block使用element。
-##### 例子
-```html
-<!-- Correct. Elements 在 `search-form` block 的内部使用-->
-<!-- `search-form` block -->
-<form class="search-form">
-    <!-- `input` element in the `search-form` block -->
-    <input class="search-form__input">
-
-    <!-- `button` element in the `search-form` block -->
-    <button class="search-form__button">Search</button>
-</form>
-
-<!--
-    Incorrect. Elements 在 `search-form` block的外部使用
--->
-<!-- `search-form` block -->
-<form class="search-form">
-</form>
-
-<!-- `input` element in the `search-form` block -->
-<input class="search-form__input">
-
-<!-- `button` element in the `search-form` block-->
-<button class="search-form__button">Search</button>
-```
 #### 从属性
 - 一个element总是一个block的一部分，你不应该脱离block使用element。
 ##### 例子
@@ -274,7 +186,7 @@ BEM (Block, Element, Modifier)是一个基于组件化思想的前端开发方�
 </form>
 ```
 
-#### 1.Key--Value类型
+#### 2.Key--Value类型
 - 当修饰符值很重要时使用。例如，“主题为黑色的menu”：`menu--theme_black`。
 - 命名规范遵循
 >block-name_modifier-name_modifier-value
