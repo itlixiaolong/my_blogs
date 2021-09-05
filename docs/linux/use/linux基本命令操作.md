@@ -1,4 +1,4 @@
-# :green_book:linux基本命令操作
+# :green_book: linux基本命令操作
 
 ## :paperclip: 1.grep "some string" file
 
