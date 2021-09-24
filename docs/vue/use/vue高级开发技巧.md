@@ -30,7 +30,13 @@
  - [ ] 28.怎样在vue中使用jsx
  - [ ] 29.怎样解决路由参数变化组件不更新的问题
  - [ ] 30.vue中路由懒加载的3种方式
- - [ ]31.使用.sync来简化父子组件的通讯
+ - [ ] 31.使用.sync来简化父子组件的通讯
+ - [ ] 32.将一个 prop 限制在一个类型的列表中
+ - [ ] 33.使用引号来监听嵌套属性
+ - [ ] 34. 如何监听一个插槽内容的变化
+ - [ ] 35.在v-for中使用解构
+ - [ ] 36.窃取子组件定义的props类型
+ - [ ] 37.组件的元数据
 
 ## :paperclip: 1.在v-for中使用函数
 
@@ -389,3 +395,215 @@ export default {
 
 ## :paperclip: 31.使用.sync来简化父子组件的通讯
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200914164723632.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70#pic_center)
+
+## :paperclip: 31.将一个 prop 限制在一个类型的列表中
+使用 prop 定义中的 validator 选项，可以将一个 prop 类型限制在一组特定的值中。
+```js
+export default {
+  name: 'Image',
+  props: {
+    src: {
+      type: String,
+    },
+    style: {
+      type: String,
+      validator: s => ['square', 'rounded'].includes(s)
+    }
+  }
+};
+```
+这个验证函数接受一个prop，如果prop有效或无效，则返回true或false。
+
+当单单传入的 true 或 false 来控制某些条件不能满足需求时，我通常使用这个方法来做。
+
+按钮类型或警告类型(信息、成功、危险、警告)是最常见的用法、、。颜色也是一个很好的用途。
+## :paperclip: 32.使用引号来监听嵌套属性
+```js
+watch {
+  '$route.query.id'() {
+    // ...
+  }
+}
+```
+## :paperclip: 33. 如何监听一个插槽内容的变化
+Vue没有内置的方法让我们检测这一点
+>MutationObserver接口提供了监视对DOM树所做更改的能力。它被设计为旧的Mutation Events功能的替代品，该功能是DOM3 Events规范的一部分。
+```js
+export default {
+  mounted() {
+    // 当有变化时调用`update`
+    const observer = new MutationObserver(this.update);
+
+    // 监听此组件的变化
+    observer.observe(this.$el, {
+      childList: true,
+      subtree: true
+    });
+  }
+};
+```
+## :paperclip: 34.在v-for中使用解构
+```js
+<template>
+  <div id="app">
+    <div
+      v-for="{name,age} in users"
+      :key="age"
+    >
+      {{ name }}+{{ age }}
+    </div>
+  </div>
+</template>
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  data () {
+    return {
+      users: [
+        { name: '11', age: 23 },
+        { name: '22', age: 44 }
+      ]
+    }
+  }
+})
+</script>
+
+```
+
+## :paperclip: 35.窃取子组件定义的props类型
+
+我从一个子组件中复制 prop 类型，只是为了在一个父组件中使用它们。但我发现，偷取这些 prop 类型要比仅仅复制它们好得多。
+
+例如，我们在这个组件中使用了一个Icon组件。
+```js
+<template>
+  <div>
+    <h2>{{ heading }}</h2>
+    <Icon
+      :type="iconType"
+      :size="iconSize"
+      :colour="iconColour"
+    />
+  </div>
+</template>
+```
+为了让它工作，我们需要添加正确的 prop 类型，从`Icon`组件复制。
+```js
+import Icon from './Icon';
+export default {
+  components: { Icon },
+  props: {
+    iconType: {
+      type: String,
+      required: true,
+    },
+    iconSize: {
+      type: String,
+      default: 'medium',
+      validator: size => [
+        'small',
+        'medium',
+        'large',
+        'x-large'
+      ].includes(size),
+    },
+    iconColour: {
+      type: String,
+      default: 'black',
+    },
+    heading: {
+      type: String,
+      required: true,
+    },
+  },
+};
+```
+当 Icon 组件的 prop类型被更新时，我们肯定会忘记返回这个组件并更新它们。随着时间的推移，当该组件的 prop类型开始偏离Icon组件中的 prop 类型时，就会引入错误。
+
+因此，这就是为什么我们要窃取组件的 prop 类型：
+```js
+import Icon from './Icon';
+export default {
+  components: { Icon },
+  props: {
+    ...Icon.props,
+    heading: {
+      type: String,
+      required: true,
+    },
+  },
+};
+```
+
+不需要再复杂了。
+
+除了在我们的例子中，我们把 icon 加在每个 prop 名称的开头。所以我们必须做一些额外的工作来实现这一点。
+```js
+import Icon from './Icon';
+
+const iconProps = {};
+
+Object.entries(Icon.props).forEach((key, val) => {
+  iconProps[`icon${key.toUpperCase()}`] = val;
+});
+
+export default {
+  components: { Icon },
+  props: {
+    ...iconProps,
+    heading: {
+      type: String,
+      required: true,
+    },
+  },
+};
+```
+现在，如果Icon组件中的 prop 类型被修改，我们的组件将保持最新状态。
+
+但是，如果一个 prop 类型从 Icon 组件中被添加或删除了呢？为了应对这些情况，我们可以使用v-bind和一个计算的 prop 来保持动态。
+
+## :paperclip: 36. 组件的元数据
+并不是添加到一个组件的每一点信息都是状态。有时我们需要添加一些元数据，给其他组件提供更多信息。
+
+例如，如果正在为谷歌 analytics这样的分析仪表：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/1410c99fa8c94cf6bc0e3c0f0b8c2df3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAaXRsaXhpYW9sb25n,size_19,color_FFFFFF,t_70,g_se,x_16)
+如果你想让布局知道每个小组件应该占多少列，你可以直接在组件上添加元数据。
+```js
+export default {
+  name: 'LiveUsersWidget',
+  // 👇 只需将其作为一个额外的属性添加
+  columns: 3,
+  props: {
+    // ...
+  },
+  data() {
+    return {
+      //...
+    };
+  },
+};
+```
+你会发现这个元数据是组件上的一个属性。
+```js
+
+import LiveUsersWidget from './LiveUsersWidget.vue';
+const { columns } = LiveUsersWidget;
+我们也可以通过特殊的$options属性从组件内部访问元数据。
+
+export default {
+  name: 'LiveUsersWidget',
+  columns: 3,
+  created() {
+    // 👇 `$options` contains all the metadata for a component
+    console.log(`Using ${this.$options.metadata} columns`);
+  },
+};
+```
+只要记住，这个元数据对组件的每个实例都是一样的，而且不是响应式的。
+
+这方面的其他用途包括（但不限于）：
+
+- 保持单个组件的版本号
+- 用于构建工具的自定义标志，以区别对待组件
+- 在计算属性、数据、watch 等之外为组件添加自定义功能
+- 其它

@@ -10,7 +10,7 @@
     
 :four_leaf_clover:5.[ts编程](./ts编程资源.md)
 
-:four_leaf_clover:6.[ts编程](./ts高级使用技巧.md)
+:four_leaf_clover:6.[ts高级使用技巧](./ts高级使用技巧.md)
 
 
     
