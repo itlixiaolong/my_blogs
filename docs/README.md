@@ -6,11 +6,11 @@ tagline: 前端知识积累
 actionText: 进入茅庐 →
 actionLink: /utils/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2018-present Evan You
+- title: 各领域触达
+  details: 专注于前端领域,也涉及和前端相关的开发流程,包含效能工具,打包,部署。
+- title: 特定场景知识记录
+  details: 记录前端开发过程中某一特定场景的解决方案
+- title: 面试习题集锦
+  details: 记录常见的面试习题及解答思路
+footer: MIT Licensed | Copyright © 京ICP备17013995号-3
 ---

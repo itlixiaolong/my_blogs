@@ -1,4 +1,4 @@
-# :green_book: google搜索的使用
+# :green_book: google搜索技巧
 
 ## :paperclip: 双引号精准搜索
 > 在关键字上加"",例如: "vue"

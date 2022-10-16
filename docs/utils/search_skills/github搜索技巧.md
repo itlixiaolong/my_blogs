@@ -51,3 +51,13 @@ vue fork:100..200 //搜索fork数大于100小于200的vue的项目
 vue stars:100..200 fork:100..200//搜索star数在100到200之间并且fork数大于100小于200的vue的项目
 
 ```
+
+> user:itlxiaolong
+
+> org:org:ElemeFE就可以列出饿了么前端组织下的仓库
+
+```js
+user:itlxiaolong //搜索itlixiaolong用户下的所有仓库
+org:ElemeFE //搜索饿了么团队下所有的库
+
+```

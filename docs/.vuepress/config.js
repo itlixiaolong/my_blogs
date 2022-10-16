@@ -1,5 +1,5 @@
 module.exports = {
-  title: '前端茅庐',
+  title: '自我学习',
   description: 'Just playing around',
   markdown: {
     lineNumbers: true
