@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>📗 shell之变量 | 自我学习</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.2cb6b36c.css" as="style"><link rel="preload" href="/assets/js/app.2398fcc2.js" as="script"><link rel="preload" href="/assets/js/2.08c4717b.js" as="script"><link rel="preload" href="/assets/js/1.717facd3.js" as="script"><link rel="preload" href="/assets/js/66.9652f8bc.js" as="script"><link rel="prefetch" href="/assets/js/10.ab1e6354.js"><link rel="prefetch" href="/assets/js/11.90426ed2.js"><link rel="prefetch" href="/assets/js/12.32a8b8e2.js"><link rel="prefetch" href="/assets/js/13.bbfe4532.js"><link rel="prefetch" href="/assets/js/14.717cc3eb.js"><link rel="prefetch" href="/assets/js/15.bf4ab80f.js"><link rel="prefetch" href="/assets/js/16.6a8f4294.js"><link rel="prefetch" href="/assets/js/17.a6c5c831.js"><link rel="prefetch" href="/assets/js/18.01a01689.js"><link rel="prefetch" href="/assets/js/19.c981e304.js"><link rel="prefetch" href="/assets/js/20.bf7b8256.js"><link rel="prefetch" href="/assets/js/21.8cb42efd.js"><link rel="prefetch" href="/assets/js/22.a2aed6bb.js"><link rel="prefetch" href="/assets/js/23.2be23482.js"><link rel="prefetch" href="/assets/js/24.ac4d4ce5.js"><link rel="prefetch" href="/assets/js/25.e2e1f370.js"><link rel="prefetch" href="/assets/js/26.4e3cfb67.js"><link rel="prefetch" href="/assets/js/27.560e80b6.js"><link rel="prefetch" href="/assets/js/28.3673389c.js"><link rel="prefetch" href="/assets/js/29.27372479.js"><link rel="prefetch" href="/assets/js/3.418e6c73.js"><link rel="prefetch" href="/assets/js/30.57a27a15.js"><link rel="prefetch" href="/assets/js/31.b8d8e7be.js"><link rel="prefetch" href="/assets/js/32.50831209.js"><link rel="prefetch" href="/assets/js/33.2471604e.js"><link rel="prefetch" href="/assets/js/34.52c4dcd8.js"><link rel="prefetch" href="/assets/js/35.3cc9c7b0.js"><link rel="prefetch" href="/assets/js/36.bed47110.js"><link rel="prefetch" href="/assets/js/37.ff7d3418.js"><link rel="prefetch" href="/assets/js/38.5ccbb6b9.js"><link rel="prefetch" href="/assets/js/39.4bc2523a.js"><link rel="prefetch" href="/assets/js/4.c6a9058c.js"><link rel="prefetch" href="/assets/js/40.45422265.js"><link rel="prefetch" href="/assets/js/41.f55febbc.js"><link rel="prefetch" href="/assets/js/42.04d5e38f.js"><link rel="prefetch" href="/assets/js/43.96731499.js"><link rel="prefetch" href="/assets/js/44.cf987bd2.js"><link rel="prefetch" href="/assets/js/45.01b7f31a.js"><link rel="prefetch" href="/assets/js/46.f9121e15.js"><link rel="prefetch" href="/assets/js/47.7f984c64.js"><link rel="prefetch" href="/assets/js/48.67c127cb.js"><link rel="prefetch" href="/assets/js/49.7b2e2ac8.js"><link rel="prefetch" href="/assets/js/5.efd9064c.js"><link rel="prefetch" href="/assets/js/50.19ae3a6f.js"><link rel="prefetch" href="/assets/js/51.821ccae7.js"><link rel="prefetch" href="/assets/js/52.d9b9ab23.js"><link rel="prefetch" href="/assets/js/53.2339ada3.js"><link rel="prefetch" href="/assets/js/54.26b25d9e.js"><link rel="prefetch" href="/assets/js/55.15a7c5fe.js"><link rel="prefetch" href="/assets/js/56.8e6e8bb6.js"><link rel="prefetch" href="/assets/js/57.426da1b8.js"><link rel="prefetch" href="/assets/js/58.13fb31b6.js"><link rel="prefetch" href="/assets/js/59.77c5fae1.js"><link rel="prefetch" href="/assets/js/6.2f9851c5.js"><link rel="prefetch" href="/assets/js/60.850448e1.js"><link rel="prefetch" href="/assets/js/61.f42ec1c5.js"><link rel="prefetch" href="/assets/js/62.f05eadc5.js"><link rel="prefetch" href="/assets/js/63.1547ce9b.js"><link rel="prefetch" href="/assets/js/64.5e93b9b3.js"><link rel="prefetch" href="/assets/js/65.3c7a100f.js"><link rel="prefetch" href="/assets/js/67.a08edd43.js"><link rel="prefetch" href="/assets/js/68.7e4f9365.js"><link rel="prefetch" href="/assets/js/69.9fbfdd48.js"><link rel="prefetch" href="/assets/js/7.5559a91f.js"><link rel="prefetch" href="/assets/js/70.df7d8773.js"><link rel="prefetch" href="/assets/js/71.c51b81b4.js"><link rel="prefetch" href="/assets/js/72.1909f421.js"><link rel="prefetch" href="/assets/js/73.ee6d2a50.js"><link rel="prefetch" href="/assets/js/74.a4838fe6.js"><link rel="prefetch" href="/assets/js/75.71f55e2d.js"><link rel="prefetch" href="/assets/js/76.42edf44e.js"><link rel="prefetch" href="/assets/js/77.2c8f191a.js"><link rel="prefetch" href="/assets/js/78.6f6310e9.js"><link rel="prefetch" href="/assets/js/79.937f3f11.js"><link rel="prefetch" href="/assets/js/80.2c1c47ef.js"><link rel="prefetch" href="/assets/js/81.d8b5a0fe.js"><link rel="prefetch" href="/assets/js/82.a0a65a02.js"><link rel="prefetch" href="/assets/js/83.8e6cbffd.js"><link rel="prefetch" href="/assets/js/84.3ec79939.js"><link rel="prefetch" href="/assets/js/85.bd7b361d.js"><link rel="prefetch" href="/assets/js/86.6a4fe77c.js"><link rel="prefetch" href="/assets/js/87.0e96e6a9.js"><link rel="prefetch" href="/assets/js/88.e62f20f2.js"><link rel="prefetch" href="/assets/js/89.5d3e6fe4.js"><link rel="prefetch" href="/assets/js/90.af61d637.js"><link rel="prefetch" href="/assets/js/91.41a07824.js"><link rel="prefetch" href="/assets/js/92.f22be3ac.js"><link rel="prefetch" href="/assets/js/93.ae322daa.js"><link rel="prefetch" href="/assets/js/94.bf90ee3e.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.9170ad82.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2cb6b36c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.webp" alt="自我学习" class="logo"> <span class="site-name can-hide">自我学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工作中常用工具" class="dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工作中常用工具" class="mobile-dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/utils/cmd_cli/" class="nav-link">
+  命令行工具配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/mac_software/" class="nav-link">
+  mac常见软件安装及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/search_skills/" class="nav-link">
+  搜索引擎和github的搜索技巧
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/use/" class="nav-link">
+  node常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/npm_use.html" class="nav-link">
+  npm的常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/packages/minimist/" class="nav-link">
+  好用的node包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue/use/" class="nav-link">
+  Vue常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/Vue/ui/" class="nav-link">
+  Vue常见的UI库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/css/less/" class="nav-link">
+  less
+</a></li><li class="dropdown-item"><!----> <a href="/css/scss/" class="nav-link">
+  scss
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/js/ts/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          一级标题
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js/test1.html" class="nav-link">
+  2_test1
+</a></li><li class="dropdown-subitem"><a href="/js/test2.html" class="nav-link">
+  2_test2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vscode" class="dropdown-title"><span class="title">Vscode</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vscode" class="mobile-dropdown-title"><span class="title">Vscode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode/use/" class="nav-link">
+  vscode的使用
+</a></li><li class="dropdown-item"><!----> <a href="/vscode/extentions/" class="nav-link">
+  vscode的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Chrome" class="dropdown-title"><span class="title">Chrome</span> <span class="arrow down"></span></button> <button type="button" aria-label="Chrome" class="mobile-dropdown-title"><span class="title">Chrome</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/chrome/use/" class="nav-link">
+  chrome的使用
+</a></li><li class="dropdown-item"><!----> <a href="/chorme/extentions/" class="nav-link">
+  chrome的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/env/" class="nav-link">
+  linux环境的安装
+</a></li><li class="dropdown-item"><!----> <a href="/linux/use/" class="nav-link router-link-active">
+  linux常用命令
+</a></li></ul></div></div><div class="nav-item"><a href="/future/" class="nav-link">
+  前端趋势
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link">
+  前端面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于我们" class="dropdown-title"><span class="title">关于我们</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于我们" class="mobile-dropdown-title"><span class="title">关于我们</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about_we/about.html" class="nav-link">
+  关于我们
+</a></li><li class="dropdown-item"><!----> <a href="/about_we/contact.html" class="nav-link">
+  联系我们
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工作中常用工具" class="dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工作中常用工具" class="mobile-dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/utils/cmd_cli/" class="nav-link">
+  命令行工具配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/mac_software/" class="nav-link">
+  mac常见软件安装及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/search_skills/" class="nav-link">
+  搜索引擎和github的搜索技巧
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/use/" class="nav-link">
+  node常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/npm_use.html" class="nav-link">
+  npm的常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/packages/minimist/" class="nav-link">
+  好用的node包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue/use/" class="nav-link">
+  Vue常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/Vue/ui/" class="nav-link">
+  Vue常见的UI库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/css/less/" class="nav-link">
+  less
+</a></li><li class="dropdown-item"><!----> <a href="/css/scss/" class="nav-link">
+  scss
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/js/ts/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          一级标题
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js/test1.html" class="nav-link">
+  2_test1
+</a></li><li class="dropdown-subitem"><a href="/js/test2.html" class="nav-link">
+  2_test2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vscode" class="dropdown-title"><span class="title">Vscode</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vscode" class="mobile-dropdown-title"><span class="title">Vscode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode/use/" class="nav-link">
+  vscode的使用
+</a></li><li class="dropdown-item"><!----> <a href="/vscode/extentions/" class="nav-link">
+  vscode的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Chrome" class="dropdown-title"><span class="title">Chrome</span> <span class="arrow down"></span></button> <button type="button" aria-label="Chrome" class="mobile-dropdown-title"><span class="title">Chrome</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/chrome/use/" class="nav-link">
+  chrome的使用
+</a></li><li class="dropdown-item"><!----> <a href="/chorme/extentions/" class="nav-link">
+  chrome的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/env/" class="nav-link">
+  linux环境的安装
+</a></li><li class="dropdown-item"><!----> <a href="/linux/use/" class="nav-link router-link-active">
+  linux常用命令
+</a></li></ul></div></div><div class="nav-item"><a href="/future/" class="nav-link">
+  前端趋势
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link">
+  前端面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于我们" class="dropdown-title"><span class="title">关于我们</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于我们" class="mobile-dropdown-title"><span class="title">关于我们</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about_we/about.html" class="nav-link">
+  关于我们
+</a></li><li class="dropdown-item"><!----> <a href="/about_we/contact.html" class="nav-link">
+  联系我们
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Use</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/linux/use/" aria-current="page" class="sidebar-link">📚 linux环境使用目录</a></li><li><a href="/linux/use/linux之grep命令.html" class="sidebar-link">📗 linux之grep命令</a></li><li><a href="/linux/use/linux之vim操作.html" class="sidebar-link">📗 linux之vim操作</a></li><li><a href="/linux/use/linux之打包压缩与解压缩.html" class="sidebar-link">📗 linux之打包压缩与解压缩</a></li><li><a href="/linux/use/linux之文件属性和权限操作.html" class="sidebar-link">📗 linux之文件属性和权限操作</a></li><li><a href="/linux/use/linux之文件查找命令.html" class="sidebar-link">📗 linux之文件查找命令</a></li><li><a href="/linux/use/linux之文件查看命令.html" class="sidebar-link">📗 linux之文件查看命令</a></li><li><a href="/linux/use/linux之添加和删除用户.html" class="sidebar-link">📗 linux之添加和删除用户</a></li><li><a href="/linux/use/linux基本命令操作.html" class="sidebar-link">📗 linux基本命令操作</a></li><li><a href="/linux/use/nginx.html" class="sidebar-link">📗 nginx的使用</a></li><li><a href="/linux/use/shell之awk命令.html" class="sidebar-link">📗 shell之awk命令</a></li><li><a href="/linux/use/shell之case语句.html" class="sidebar-link">📗 shell之case语句</a></li><li><a href="/linux/use/shell之if语句.html" class="sidebar-link">📗 shell之if语句</a></li><li><a href="/linux/use/shell之sed命令.html" class="sidebar-link">📗 shell之sed命令</a></li><li><a href="/linux/use/shell之函数.html" class="sidebar-link">📗 shell之函数</a></li><li><a href="/linux/use/shell之变量.html" class="active sidebar-link">📗 shell之变量</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/use/shell之变量.html#shell脚本编写规范" class="sidebar-link">📎 shell脚本编写规范</a></li><li class="sidebar-sub-header"><a href="/linux/use/shell之变量.html#shell脚本的运行" class="sidebar-link">📎 shell脚本的运行</a></li><li class="sidebar-sub-header"><a href="/linux/use/shell之变量.html#shell脚本编写的变量" class="sidebar-link">📎 shell脚本编写的变量</a></li><li class="sidebar-sub-header"><a href="/linux/use/shell之变量.html#shell脚本中的数组" class="sidebar-link">📎 shell脚本中的数组</a></li></ul></li><li><a href="/linux/use/shell之循环.html" class="sidebar-link">📗 shell之循环</a></li><li><a href="/linux/use/shell之测试命令.html" class="sidebar-link">📗 shell之测试命令</a></li><li><a href="/linux/use/shell之特殊符号的使用.html" class="sidebar-link">📗 shell之特殊符号的使用</a></li><li><a href="/linux/use/shell之环境变量配置文件.html" class="sidebar-link">📗 shell之环境变量配置文件</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="shell之变量"><a href="#shell之变量" class="header-anchor">#</a> 📗 shell之变量</h1> <h2 id="shell脚本编写规范"><a href="#shell脚本编写规范" class="header-anchor">#</a> 📎 shell脚本编写规范</h2> <p>1.一条命令只做一件事</p> <p>2.为了组合命令和多次执行,使用脚本文件来保存需要执行的命令</p> <p>3.赋予该文件的执行权限(<code>chmod u+rx fileName</code>)</p> <h2 id="shell脚本的运行"><a href="#shell脚本的运行" class="header-anchor">#</a> 📎 shell脚本的运行</h2> <p>1.在bash下开启一个子进程运行代码(bash运行,执行完不影响当前目录)</p> <ul><li><p><code>.bash ./fileName.sh</code>  (不需要为文件赋值可执行权限也可以运行)</p></li> <li><p><code>./fileName.sh</code> (必须为文件赋值可执行权限才可以运行)</p></li></ul> <p>2.在当前进程运行代码 (source运行,都不需要为文件赋予执行权限,执行完可能不会影响当前目录)</p> <ul><li><p><code>source ./fileName.sh</code></p></li> <li><p><code>. fileName.sh</code></p></li></ul> <h2 id="shell脚本编写的变量"><a href="#shell脚本编写的变量" class="header-anchor">#</a> 📎 shell脚本编写的变量</h2> <h5 id="_1-变量的命名"><a href="#_1-变量的命名" class="header-anchor">#</a> 1.变量的命名</h5> <ul><li>字母数字下划线,不能用数字开头</li> <li>见名知义</li></ul> <h5 id="_2-变量的定义"><a href="#_2-变量的定义" class="header-anchor">#</a> 2.变量的定义</h5> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token assign-left variable">test1</span><span class="token operator">=</span><span class="token number">124</span> //注意<span class="token operator">=</span>左右不能有空格
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><blockquote><p>为变量赋值的过程称为变量替换</p></blockquote> <ol><li>变量名=变量值</li></ol> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token assign-left variable">test</span><span class="token operator">=</span><span class="token number">123</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="2"><li>使用let为变量赋值</li></ol> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token builtin class-name">let</span> <span class="token assign-left variable">test</span><span class="token operator">=</span><span class="token number">123</span>+10
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="3"><li>将命令赋值给变量</li></ol> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token assign-left variable">l</span><span class="token operator">=</span>ls
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="4"><li>将命令结果赋值给变量,使用$()或者``包裹表达式</li></ol> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token assign-left variable">ls_result</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">ls</span> /etc<span class="token variable">)</span></span>
+
+<span class="token assign-left variable">ls_result</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">ls</span> /etc<span class="token variable">`</span></span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="5"><li>变量值中有空格等特殊字符可以包裹着在&quot;&quot;或者''中</li></ol> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment"># test=hello world</span>
+-bash: world: <span class="token builtin class-name">command</span> not found
+<span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment"># echo $test</span>
+
+<span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment"># test2='hello world'</span>
+<span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment"># echo $test2 </span>
+hello world
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h4 id="_3-变量的使用"><a href="#_3-变量的使用" class="header-anchor">#</a> 3.变量的使用</h4> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token builtin class-name">echo</span> <span class="token variable">$test1</span> //注意使用时变量要加$
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="_4-内置变量"><a href="#_4-内置变量" class="header-anchor">#</a> 4.内置变量</h4> <ul><li>以大写命名</li></ul> <h5 id="_1-环境变量-所有shell共享的变量-可以使用env-和-set查看所有变量-使用echo-变量名-查看单个变量"><a href="#_1-环境变量-所有shell共享的变量-可以使用env-和-set查看所有变量-使用echo-变量名-查看单个变量" class="header-anchor">#</a> 1.环境变量---所有shell共享的变量,可以使用env 和 set查看所有变量,使用echo $[变量名] 查看单个变量</h5> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token function">env</span> <span class="token operator">|</span><span class="token function">more</span>
+
+<span class="token assign-left variable">MANPATH</span><span class="token operator">=</span>/root/.nvm/versions/node/v13.7.0/share/man:/usr/local/share/man:/usr/share/man
+<span class="token assign-left variable">NVM_IOJS_ORG_VERSION_LISTING</span><span class="token operator">=</span>https://iojs.org/dist/index.tab
+<span class="token assign-left variable"><span class="token environment constant">XDG_SESSION_ID</span></span><span class="token operator">=</span><span class="token number">14679</span>
+<span class="token assign-left variable"><span class="token environment constant">HOSTNAME</span></span><span class="token operator">=</span>VM_0_15_centos
+<span class="token assign-left variable"><span class="token environment constant">TERM</span></span><span class="token operator">=</span>vt100
+<span class="token assign-left variable"><span class="token environment constant">SHELL</span></span><span class="token operator">=</span>/bin/bash
+<span class="token assign-left variable"><span class="token environment constant">HISTSIZE</span></span><span class="token operator">=</span><span class="token number">3000</span>
+<span class="token assign-left variable">SSH_CLIENT</span><span class="token operator">=</span><span class="token number">119.28</span>.22.215 <span class="token number">36030</span> <span class="token number">22</span>
+<span class="token assign-left variable">NVM_PATH</span><span class="token operator">=</span>/root/.nvm/versions/node/v13.7.0/lib/node
+<span class="token assign-left variable">SSH_TTY</span><span class="token operator">=</span>/dev/pts/1
+<span class="token assign-left variable">NVM_DIR</span><span class="token operator">=</span>/root/.nvm
+<span class="token assign-left variable"><span class="token environment constant">USER</span></span><span class="token operator">=</span>root
+<span class="token punctuation">..</span>.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><blockquote><p>环境变量中比较重要的两个变量</p></blockquote> <ul><li>1.PATH ---控制着linux寻找命令的地址</li></ul> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token builtin class-name">echo</span> <span class="token environment constant">$PATH</span>
+
+/root/.nvm/versions/node/v13.7.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>想要让某条命令全局可用</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>//比如我们在/root下自定义1.sh,我们想在任意位置使用1.sh而不是bash /root/1.sh 我们可以这样
+
+<span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:/root
+    
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>注意:==修改PATH只在当前shell和其子shell生效,想让所有新开的shell生效,需要修高.bashrc文件,将修改保存,并运行 source .bashrc==</p> <ul><li>2.USER和UID---存储着当前用户和用户id</li></ul> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment">#echo $USER</span>
+root
+<span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment">#echo $UID</span>
+<span class="token number">0</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>3.PS1 ---控制着shell的样式,可以自定义shell的输出信息和颜色</li></ul> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token builtin class-name">echo</span> <span class="token environment constant">$PS1</span>
+
+<span class="token string">'[\u@\h \W]\$ '</span> //意思就是：<span class="token punctuation">[</span>当前用户的账号名称@主机名的第一个名字 工作目录的最后一层目录名<span class="token punctuation">]</span><span class="token comment">#</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><h6 id="_1-ps1的常用参数以及含义"><a href="#_1-ps1的常用参数以及含义" class="header-anchor">#</a> 1.PS1的常用参数以及含义:</h6></blockquote> <table><thead><tr><th>字符</th> <th>含义</th></tr></thead> <tbody><tr><td>\d</td> <td>代表日期，格式为weekday month date，例如：&quot;Mon Aug 1&quot;</td></tr> <tr><td>\H</td> <td>完整的主机名称</td></tr> <tr><td>\h</td> <td>仅取主机名中的第一个名字</td></tr> <tr><td>t</td> <td>显示时间为24小时格式，如：HH：MM：SS</td></tr> <tr><td>\T</td> <td>显示时间为12小时格式</td></tr> <tr><td>\A</td> <td>显示时间为24小时格式：HH：MM</td></tr> <tr><td>\u</td> <td>当前用户的账号名称</td></tr> <tr><td>\v</td> <td>BASH的版本信息</td></tr> <tr><td>\w</td> <td>完整的工作目录名称</td></tr> <tr><td>\W</td> <td>利用basename取得工作目录名称，只显示最后一个目录名</td></tr> <tr><td>#</td> <td>下达的第几个命令</td></tr> <tr><td>$</td> <td>提示字符，如果是root用户，提示符为 # ，普通用户则为 $</td></tr></tbody></table> <blockquote><h6 id="_2-颜色设置参数"><a href="#_2-颜色设置参数" class="header-anchor">#</a> 2.颜色设置参数</h6></blockquote> <p>在PS1中设置字符颜色的格式为：</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token punctuation">\</span>e<span class="token punctuation">[</span>F<span class="token punctuation">;</span>Bm<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">\</span>e<span class="token punctuation">[</span>0m
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>其中“F“为字体颜色，编号为30-37
+“B”为背景颜色，编号为40-47,
+\e[0m作为颜色设定的结束。</p> <p>颜色对照表：</p> <table><thead><tr><th>F</th> <th>B</th> <th>颜色</th></tr></thead> <tbody><tr><td>30</td> <td>40</td> <td>黑色</td></tr> <tr><td>31</td> <td>41</td> <td>红色</td></tr> <tr><td>32</td> <td>42</td> <td>绿色</td></tr> <tr><td>33</td> <td>43</td> <td>黄色</td></tr> <tr><td>34</td> <td>44</td> <td>蓝色</td></tr> <tr><td>35</td> <td>45</td> <td>紫红色</td></tr> <tr><td>36</td> <td>46</td> <td>青蓝色</td></tr> <tr><td>37</td> <td>47</td> <td>白色</td></tr></tbody></table> <p>只需将对应数字套入设置格式中即可。比如要设置命令行的格式为</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>绿字黑底<span class="token punctuation">(</span><span class="token punctuation">\</span>e<span class="token punctuation">[</span><span class="token number">32</span><span class="token punctuation">;</span>40m<span class="token punctuation">)</span>，显示当前用户的账号名称<span class="token punctuation">(</span><span class="token punctuation">\</span>u<span class="token punctuation">)</span>、主机的第一个名字<span class="token punctuation">(</span><span class="token punctuation">\</span>h<span class="token punctuation">)</span>、完整的当前工作目录名称<span class="token punctuation">(</span><span class="token punctuation">\</span>w<span class="token punctuation">)</span>、24小时格式时间<span class="token punctuation">(</span><span class="token punctuation">\</span>t<span class="token punctuation">)</span>，
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>可以直接在命令行键入如下命令：</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token assign-left variable"><span class="token environment constant">PS1</span></span><span class="token operator">=</span><span class="token string">'[\[\e[32;40m\]\u@\h \w \t]$ \[\e[0m\]'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>经过多次测试后,最终确定了一个适合我自己的格式:</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token assign-left variable"><span class="token environment constant">PS1</span></span><span class="token operator">=</span><span class="token string">&quot;\[<span class="token entity" title="\e">\e</span>[37;40m\][\[<span class="token entity" title="\e">\e</span>[32;40m\]\u\[<span class="token entity" title="\e">\e</span>[37;40m\]@\h \[<span class="token entity" title="\e">\e</span>[36;40m\]\w\[<span class="token entity" title="\e">\e</span>[0m\]]<span class="token entity" title="\\">\\</span>$ &quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><blockquote><h6 id="_3-修改-bashrc文件-永久保存命令行样式"><a href="#_3-修改-bashrc文件-永久保存命令行样式" class="header-anchor">#</a> 3.修改.bashrc文件,永久保存命令行样式.</h6></blockquote> <p>上面的设置的作用域只有当前终端的登陆有效，关闭终端或退出登录即刻失效。要想永久性的保存设置，需要修改.bashrc配置文件。</p> <p>键入命令：</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /root
+<span class="token function">ls</span> <span class="token parameter variable">-a</span>　　
+<span class="token operator">&lt;</span><span class="token operator">!</span>--找到.bashrc--<span class="token operator">&gt;</span>
+<span class="token function">vim</span> .bashrc
+<span class="token operator">&lt;</span><span class="token operator">!</span>--在末尾加入--<span class="token operator">&gt;</span>
+<span class="token assign-left variable"><span class="token environment constant">PS1</span></span><span class="token operator">=</span><span class="token string">&quot;\[<span class="token entity" title="\e">\e</span>[37;40m\][\[<span class="token entity" title="\e">\e</span>[32;40m\]\u\[<span class="token entity" title="\e">\e</span>[37;40m\]@\h \[<span class="token entity" title="\e">\e</span>[36;40m\]\w\[<span class="token entity" title="\e">\e</span>[0m\]]<span class="token entity" title="\\">\\</span>$ &quot;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span>--保存退出--<span class="token operator">&gt;</span>
+<span class="token builtin class-name">source</span> .bashrc
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h5 id="_2-预定义变量"><a href="#_2-预定义变量" class="header-anchor">#</a> 2.预定义变量</h5> <ul><li>1.$? ---存储上次命令运行的结果,是否出错,值为0|&gt;0,0代表没有错误,非0代表有错,在shell编程中很有用</li></ul> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment">#ls /root</span>
+<span class="token punctuation">..</span><span class="token punctuation">..</span>.
+<span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment">#echo $?</span>
+<span class="token number">0</span>
+<span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment">#ls /xx</span>
+ls: cannot access /xx: No such <span class="token function">file</span> or directory
+<span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment">#echo $?</span>
+<span class="token number">2</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ul><li>1.$0 ---存储当前进程的名称</li></ul> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment">#echo $0</span>
+<span class="token parameter variable">-bash</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul><li>1.$$ ---存储当前进程的pid</li></ul> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment">#echo $$</span>
+<span class="token number">30289</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h5 id="_2-位置变量"><a href="#_2-位置变量" class="header-anchor">#</a> 2.位置变量</h5> <ul><li><p>存储执行脚本命令时传入的参数,以$1,$2,$3,...,${10},...${n}</p></li> <li><p>获取传入参数的个数 $#</p></li></ul> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>//1.sh
+
+<span class="token comment">#!/bin/bash</span>
+<span class="token comment">#demo</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$1</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$2</span>
+
+//bash
+./1.sh <span class="token number">1</span> <span class="token number">2</span>
+//1
+//2
+//此时如果执行1.sh <span class="token number">1</span>,只有一个参数这时程序可能会出错
+重新修改1.sh
+// <span class="token number">1</span>.sh new
+<span class="token comment">#!/bin/bash</span>
+<span class="token comment">#demo</span>
+<span class="token assign-left variable">pos1</span><span class="token operator">=</span><span class="token variable">$1</span>
+<span class="token assign-left variable">pos2</span><span class="token operator">=</span><span class="token variable">${2-_}</span> //如果第二个参数不传我们就使用_作为默认值
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="shell脚本中的数组"><a href="#shell脚本中的数组" class="header-anchor">#</a> 📎 shell脚本中的数组</h2> <h4 id="_1-数组的定义"><a href="#_1-数组的定义" class="header-anchor">#</a> 1.数组的定义</h4> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token assign-left variable">ips</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10.0</span>.0.1 <span class="token number">10.0</span>.0.2 <span class="token number">10.0</span>.0.3<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="_2-显示数组中所有的元素-或者"><a href="#_2-显示数组中所有的元素-或者" class="header-anchor">#</a> 2.显示数组中所有的元素 @或者*</h4> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment"># echo ${ips[@]}</span>
+<span class="token number">10.0</span>.0.1 <span class="token number">10.0</span>.0.2 <span class="token number">10.0</span>.0.3
+
+<span class="token punctuation">[</span>root@VM_0_15_centos ~<span class="token punctuation">]</span><span class="token comment"># echo ${ips[*]}</span>
+<span class="token number">10.0</span>.0.1 <span class="token number">10.0</span>.0.2 <span class="token number">10.0</span>.0.3
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="_3-显示数组中某一个元素"><a href="#_3-显示数组中某一个元素" class="header-anchor">#</a> 3.显示数组中某一个元素</h4> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token builtin class-name">echo</span> <span class="token variable">${ips<span class="token punctuation">[</span>index<span class="token punctuation">]</span>}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="_4-显示数组的长度"><a href="#_4-显示数组的长度" class="header-anchor">#</a> 4.显示数组的长度</h4> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token builtin class-name">echo</span> <span class="token variable">${<span class="token operator">#</span>ips<span class="token punctuation">[</span>@<span class="token punctuation">]</span>}</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${<span class="token operator">#</span>ips<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="shell中的转义和引用"><a href="#shell中的转义和引用" class="header-anchor">#</a> shell中的转义和引用</h3> <blockquote><p>特殊字符</p></blockquote> <ul><li>一个字符不仅有字面意义,还有元意</li></ul> <table><thead><tr><th>符号</th> <th>意义</th></tr></thead> <tbody><tr><td>#</td> <td>注释</td></tr> <tr><td>;</td> <td>分号(连接两条命令)</td></tr> <tr><td>\</td> <td>转义符号</td></tr> <tr><td>&quot;和'</td> <td>引号</td></tr></tbody></table> <h3 id="shell中的运算符"><a href="#shell中的运算符" class="header-anchor">#</a> shell中的运算符</h3> <h4 id="_1-赋值运算符"><a href="#_1-赋值运算符" class="header-anchor">#</a> 1.赋值运算符</h4> <ul><li>=赋值运算符,用于算数和字符串赋值</li> <li>使用unset 取消变量的赋值</li> <li>=还可以作为测试操作符</li></ul> <h4 id="_2-算数运算符"><a href="#_2-算数运算符" class="header-anchor">#</a> 2.算数运算符</h4> <blockquote><p>基本运算符</p></blockquote> <table><thead><tr><th>运算符</th> <th>含义</th></tr></thead> <tbody><tr><td>=</td> <td>加法</td></tr> <tr><td>-</td> <td>减法</td></tr> <tr><td>*</td> <td>乘法</td></tr> <tr><td>/</td> <td>除法</td></tr> <tr><td>**</td> <td>乘方</td></tr> <tr><td>%</td> <td>取余</td></tr></tbody></table> <p>-使用expr进行运算(只支持整数的运算)</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token assign-left variable">test</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">expr</span> <span class="token number">4</span>+5<span class="token variable">`</span></span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$test</span>
+//9
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="_3-数字常量"><a href="#_3-数字常量" class="header-anchor">#</a> 3.数字常量</h4> <blockquote><p>数字常量的使用方法</p></blockquote> <ul><li>let 变量名=变量值</li> <li>变量值使用以0开头的八进制</li> <li>变量值使用以0x开头的十六进制</li></ul> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token assign-left variable">a</span><span class="token operator">=</span><span class="token number">2</span>
+<span class="token builtin class-name">let</span> a++
+<span class="token builtin class-name">let</span> <span class="token assign-left variable">a</span><span class="token operator">+=</span><span class="token number">2</span>
+<span class="token builtin class-name">let</span> <span class="token assign-left variable">a</span><span class="token operator">=</span>a+2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h4 id="_4-双圆括号"><a href="#_4-双圆括号" class="header-anchor">#</a> 4.双圆括号</h4> <blockquote><p>双圆括号是let命令的简写</p></blockquote> <ul><li>((a=10))</li> <li>((a++))</li> <li>echo ((10+20))</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/linux/use/shell之函数.html" class="prev">
+        📗 shell之函数
+      </a></span> <span class="next"><a href="/linux/use/shell之循环.html">
+        📗 shell之循环
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.2398fcc2.js" defer></script><script src="/assets/js/2.08c4717b.js" defer></script><script src="/assets/js/1.717facd3.js" defer></script><script src="/assets/js/66.9652f8bc.js" defer></script>
+  </body>
+</html>

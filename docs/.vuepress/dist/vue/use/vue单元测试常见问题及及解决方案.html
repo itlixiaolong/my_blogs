@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>📗 vue单元测试常见问题及及解决方案 | 自我学习</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.2cb6b36c.css" as="style"><link rel="preload" href="/assets/js/app.2398fcc2.js" as="script"><link rel="preload" href="/assets/js/2.08c4717b.js" as="script"><link rel="preload" href="/assets/js/1.717facd3.js" as="script"><link rel="preload" href="/assets/js/92.f22be3ac.js" as="script"><link rel="prefetch" href="/assets/js/10.ab1e6354.js"><link rel="prefetch" href="/assets/js/11.90426ed2.js"><link rel="prefetch" href="/assets/js/12.32a8b8e2.js"><link rel="prefetch" href="/assets/js/13.bbfe4532.js"><link rel="prefetch" href="/assets/js/14.717cc3eb.js"><link rel="prefetch" href="/assets/js/15.bf4ab80f.js"><link rel="prefetch" href="/assets/js/16.6a8f4294.js"><link rel="prefetch" href="/assets/js/17.a6c5c831.js"><link rel="prefetch" href="/assets/js/18.01a01689.js"><link rel="prefetch" href="/assets/js/19.c981e304.js"><link rel="prefetch" href="/assets/js/20.bf7b8256.js"><link rel="prefetch" href="/assets/js/21.8cb42efd.js"><link rel="prefetch" href="/assets/js/22.a2aed6bb.js"><link rel="prefetch" href="/assets/js/23.2be23482.js"><link rel="prefetch" href="/assets/js/24.ac4d4ce5.js"><link rel="prefetch" href="/assets/js/25.e2e1f370.js"><link rel="prefetch" href="/assets/js/26.4e3cfb67.js"><link rel="prefetch" href="/assets/js/27.560e80b6.js"><link rel="prefetch" href="/assets/js/28.3673389c.js"><link rel="prefetch" href="/assets/js/29.27372479.js"><link rel="prefetch" href="/assets/js/3.418e6c73.js"><link rel="prefetch" href="/assets/js/30.57a27a15.js"><link rel="prefetch" href="/assets/js/31.b8d8e7be.js"><link rel="prefetch" href="/assets/js/32.50831209.js"><link rel="prefetch" href="/assets/js/33.2471604e.js"><link rel="prefetch" href="/assets/js/34.52c4dcd8.js"><link rel="prefetch" href="/assets/js/35.3cc9c7b0.js"><link rel="prefetch" href="/assets/js/36.bed47110.js"><link rel="prefetch" href="/assets/js/37.ff7d3418.js"><link rel="prefetch" href="/assets/js/38.5ccbb6b9.js"><link rel="prefetch" href="/assets/js/39.4bc2523a.js"><link rel="prefetch" href="/assets/js/4.c6a9058c.js"><link rel="prefetch" href="/assets/js/40.45422265.js"><link rel="prefetch" href="/assets/js/41.f55febbc.js"><link rel="prefetch" href="/assets/js/42.04d5e38f.js"><link rel="prefetch" href="/assets/js/43.96731499.js"><link rel="prefetch" href="/assets/js/44.cf987bd2.js"><link rel="prefetch" href="/assets/js/45.01b7f31a.js"><link rel="prefetch" href="/assets/js/46.f9121e15.js"><link rel="prefetch" href="/assets/js/47.7f984c64.js"><link rel="prefetch" href="/assets/js/48.67c127cb.js"><link rel="prefetch" href="/assets/js/49.7b2e2ac8.js"><link rel="prefetch" href="/assets/js/5.efd9064c.js"><link rel="prefetch" href="/assets/js/50.19ae3a6f.js"><link rel="prefetch" href="/assets/js/51.821ccae7.js"><link rel="prefetch" href="/assets/js/52.d9b9ab23.js"><link rel="prefetch" href="/assets/js/53.2339ada3.js"><link rel="prefetch" href="/assets/js/54.26b25d9e.js"><link rel="prefetch" href="/assets/js/55.15a7c5fe.js"><link rel="prefetch" href="/assets/js/56.8e6e8bb6.js"><link rel="prefetch" href="/assets/js/57.426da1b8.js"><link rel="prefetch" href="/assets/js/58.13fb31b6.js"><link rel="prefetch" href="/assets/js/59.77c5fae1.js"><link rel="prefetch" href="/assets/js/6.2f9851c5.js"><link rel="prefetch" href="/assets/js/60.850448e1.js"><link rel="prefetch" href="/assets/js/61.f42ec1c5.js"><link rel="prefetch" href="/assets/js/62.f05eadc5.js"><link rel="prefetch" href="/assets/js/63.1547ce9b.js"><link rel="prefetch" href="/assets/js/64.5e93b9b3.js"><link rel="prefetch" href="/assets/js/65.3c7a100f.js"><link rel="prefetch" href="/assets/js/66.9652f8bc.js"><link rel="prefetch" href="/assets/js/67.a08edd43.js"><link rel="prefetch" href="/assets/js/68.7e4f9365.js"><link rel="prefetch" href="/assets/js/69.9fbfdd48.js"><link rel="prefetch" href="/assets/js/7.5559a91f.js"><link rel="prefetch" href="/assets/js/70.df7d8773.js"><link rel="prefetch" href="/assets/js/71.c51b81b4.js"><link rel="prefetch" href="/assets/js/72.1909f421.js"><link rel="prefetch" href="/assets/js/73.ee6d2a50.js"><link rel="prefetch" href="/assets/js/74.a4838fe6.js"><link rel="prefetch" href="/assets/js/75.71f55e2d.js"><link rel="prefetch" href="/assets/js/76.42edf44e.js"><link rel="prefetch" href="/assets/js/77.2c8f191a.js"><link rel="prefetch" href="/assets/js/78.6f6310e9.js"><link rel="prefetch" href="/assets/js/79.937f3f11.js"><link rel="prefetch" href="/assets/js/80.2c1c47ef.js"><link rel="prefetch" href="/assets/js/81.d8b5a0fe.js"><link rel="prefetch" href="/assets/js/82.a0a65a02.js"><link rel="prefetch" href="/assets/js/83.8e6cbffd.js"><link rel="prefetch" href="/assets/js/84.3ec79939.js"><link rel="prefetch" href="/assets/js/85.bd7b361d.js"><link rel="prefetch" href="/assets/js/86.6a4fe77c.js"><link rel="prefetch" href="/assets/js/87.0e96e6a9.js"><link rel="prefetch" href="/assets/js/88.e62f20f2.js"><link rel="prefetch" href="/assets/js/89.5d3e6fe4.js"><link rel="prefetch" href="/assets/js/90.af61d637.js"><link rel="prefetch" href="/assets/js/91.41a07824.js"><link rel="prefetch" href="/assets/js/93.ae322daa.js"><link rel="prefetch" href="/assets/js/94.bf90ee3e.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.9170ad82.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2cb6b36c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.webp" alt="自我学习" class="logo"> <span class="site-name can-hide">自我学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工作中常用工具" class="dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工作中常用工具" class="mobile-dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/utils/cmd_cli/" class="nav-link">
+  命令行工具配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/mac_software/" class="nav-link">
+  mac常见软件安装及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/search_skills/" class="nav-link">
+  搜索引擎和github的搜索技巧
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/use/" class="nav-link">
+  node常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/npm_use.html" class="nav-link">
+  npm的常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/packages/minimist/" class="nav-link">
+  好用的node包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue/use/" class="nav-link">
+  Vue常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/Vue/ui/" class="nav-link">
+  Vue常见的UI库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/css/less/" class="nav-link">
+  less
+</a></li><li class="dropdown-item"><!----> <a href="/css/scss/" class="nav-link">
+  scss
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/js/ts/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          一级标题
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js/test1.html" class="nav-link">
+  2_test1
+</a></li><li class="dropdown-subitem"><a href="/js/test2.html" class="nav-link">
+  2_test2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vscode" class="dropdown-title"><span class="title">Vscode</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vscode" class="mobile-dropdown-title"><span class="title">Vscode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode/use/" class="nav-link">
+  vscode的使用
+</a></li><li class="dropdown-item"><!----> <a href="/vscode/extentions/" class="nav-link">
+  vscode的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Chrome" class="dropdown-title"><span class="title">Chrome</span> <span class="arrow down"></span></button> <button type="button" aria-label="Chrome" class="mobile-dropdown-title"><span class="title">Chrome</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/chrome/use/" class="nav-link">
+  chrome的使用
+</a></li><li class="dropdown-item"><!----> <a href="/chorme/extentions/" class="nav-link">
+  chrome的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/env/" class="nav-link">
+  linux环境的安装
+</a></li><li class="dropdown-item"><!----> <a href="/linux/use/" class="nav-link">
+  linux常用命令
+</a></li></ul></div></div><div class="nav-item"><a href="/future/" class="nav-link">
+  前端趋势
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link">
+  前端面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于我们" class="dropdown-title"><span class="title">关于我们</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于我们" class="mobile-dropdown-title"><span class="title">关于我们</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about_we/about.html" class="nav-link">
+  关于我们
+</a></li><li class="dropdown-item"><!----> <a href="/about_we/contact.html" class="nav-link">
+  联系我们
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工作中常用工具" class="dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工作中常用工具" class="mobile-dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/utils/cmd_cli/" class="nav-link">
+  命令行工具配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/mac_software/" class="nav-link">
+  mac常见软件安装及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/search_skills/" class="nav-link">
+  搜索引擎和github的搜索技巧
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/use/" class="nav-link">
+  node常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/npm_use.html" class="nav-link">
+  npm的常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/packages/minimist/" class="nav-link">
+  好用的node包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue/use/" class="nav-link">
+  Vue常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/Vue/ui/" class="nav-link">
+  Vue常见的UI库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/css/less/" class="nav-link">
+  less
+</a></li><li class="dropdown-item"><!----> <a href="/css/scss/" class="nav-link">
+  scss
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/js/ts/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          一级标题
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js/test1.html" class="nav-link">
+  2_test1
+</a></li><li class="dropdown-subitem"><a href="/js/test2.html" class="nav-link">
+  2_test2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vscode" class="dropdown-title"><span class="title">Vscode</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vscode" class="mobile-dropdown-title"><span class="title">Vscode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode/use/" class="nav-link">
+  vscode的使用
+</a></li><li class="dropdown-item"><!----> <a href="/vscode/extentions/" class="nav-link">
+  vscode的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Chrome" class="dropdown-title"><span class="title">Chrome</span> <span class="arrow down"></span></button> <button type="button" aria-label="Chrome" class="mobile-dropdown-title"><span class="title">Chrome</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/chrome/use/" class="nav-link">
+  chrome的使用
+</a></li><li class="dropdown-item"><!----> <a href="/chorme/extentions/" class="nav-link">
+  chrome的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/env/" class="nav-link">
+  linux环境的安装
+</a></li><li class="dropdown-item"><!----> <a href="/linux/use/" class="nav-link">
+  linux常用命令
+</a></li></ul></div></div><div class="nav-item"><a href="/future/" class="nav-link">
+  前端趋势
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link">
+  前端面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于我们" class="dropdown-title"><span class="title">关于我们</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于我们" class="mobile-dropdown-title"><span class="title">关于我们</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about_we/about.html" class="nav-link">
+  关于我们
+</a></li><li class="dropdown-item"><!----> <a href="/about_we/contact.html" class="nav-link">
+  联系我们
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Use</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue/use/" aria-current="page" class="sidebar-link">📚vue日常使用的根目录</a></li><li><a href="/vue/use/vue专家不想让你知道的7个秘密.html" class="sidebar-link">📗 vue专家不想让你知道的7个秘密</a></li><li><a href="/vue/use/vue单元测试常见问题及及解决方案.html" class="active sidebar-link">📗 vue单元测试常见问题及及解决方案</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue/use/vue单元测试常见问题及及解决方案.html#_1-document原生方法注册" class="sidebar-link">📎 1.document原生方法注册</a></li><li class="sidebar-sub-header"><a href="/vue/use/vue单元测试常见问题及及解决方案.html#_2-window自定义属性注册" class="sidebar-link">📎 2.window自定义属性注册</a></li><li class="sidebar-sub-header"><a href="/vue/use/vue单元测试常见问题及及解决方案.html#_3-element-ui等外接组件注册" class="sidebar-link">📎 3.element-ui等外接组件注册</a></li><li class="sidebar-sub-header"><a href="/vue/use/vue单元测试常见问题及及解决方案.html#_4-纯展示外部组件替换渲染方式" class="sidebar-link">📎 4.纯展示外部组件替换渲染方式</a></li><li class="sidebar-sub-header"><a href="/vue/use/vue单元测试常见问题及及解决方案.html#_5-wrapper-find-方法踩坑" class="sidebar-link">📎 5.wrapper.find()方法踩坑</a></li><li class="sidebar-sub-header"><a href="/vue/use/vue单元测试常见问题及及解决方案.html#_6-对于第三方组件的逻辑测试-如elementui" class="sidebar-link">📎 6.对于第三方组件的逻辑测试,如elementui</a></li><li class="sidebar-sub-header"><a href="/vue/use/vue单元测试常见问题及及解决方案.html#_7-对于引入node-modules依赖的报错" class="sidebar-link">📎 7.对于引入node_modules依赖的报错</a></li></ul></li><li><a href="/vue/use/vue的源码学习资料.html" class="sidebar-link">📗 vue的源码学习资料</a></li><li><a href="/vue/use/vue高级开发技巧.html" class="sidebar-link">📗 vue高级开发技巧</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue单元测试常见问题及及解决方案"><a href="#vue单元测试常见问题及及解决方案" class="header-anchor">#</a> 📗 vue单元测试常见问题及及解决方案</h1> <h2 id="_1-document原生方法注册"><a href="#_1-document原生方法注册" class="header-anchor">#</a> 📎 1.document原生方法注册</h2> <p>问题：单元测试环境下无法获取document方法
+例：document.getElementById
+解决方案：jest.spyOn().mockImplementation()</p> <p><img src="https://img-blog.csdnimg.cn/b8c4c42cd5eb4a6689e838b767561d33.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <h2 id="_2-window自定义属性注册"><a href="#_2-window自定义属性注册" class="header-anchor">#</a> 📎 2.window自定义属性注册</h2> <p>问题：单元测试环境下无法获取所有window属性
+例：window.zhuge.方法名（失效）</p> <p><img src="https://img-blog.csdnimg.cn/63ad311338944d8681c2df3483214ef3.png" alt="在这里插入图片描述"></p> <p>解决方案：jest.spyOn().mockImplementation()
+<img src="https://img-blog.csdnimg.cn/fe1548534aa54f67bead50f4d709cff6.png" alt="在这里插入图片描述"></p> <h2 id="_3-element-ui等外接组件注册"><a href="#_3-element-ui等外接组件注册" class="header-anchor">#</a> 📎 3.element-ui等外接组件注册</h2> <p>问题:单元测试环境下无法识别除vue框架本身的组件
+例：调用element-ui
+解决方案：
+<img src="https://img-blog.csdnimg.cn/805d3716e7f34e8b93fa815c7ecc3ea8.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <p>注意要将注册组件的函数挂载到wrapper当中
+<img src="https://img-blog.csdnimg.cn/d1c2d0d7f13640d5a70d29f55e1cfbd2.png" alt="在这里插入图片描述"></p> <h2 id="_4-纯展示外部组件替换渲染方式"><a href="#_4-纯展示外部组件替换渲染方式" class="header-anchor">#</a> 📎 4.纯展示外部组件替换渲染方式</h2> <p><img src="https://img-blog.csdnimg.cn/41d3fcf6370c437cbd7607e81455507a.png" alt="在这里插入图片描述"></p> <h2 id="_5-wrapper-find-方法踩坑"><a href="#_5-wrapper-find-方法踩坑" class="header-anchor">#</a> 📎 5.wrapper.find()方法踩坑</h2> <p>使用wrapper.find()方法获取dom对象时，此方法优先获取wrapper实例中render()函数中返回的结构，如果render()返回中不存在对应dom，则会导致wrapper.find()返回ErrorWrapper
+例：
+<img src="https://img-blog.csdnimg.cn/843dd18f47c24a088d00dc9ee27d229a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <h2 id="_6-对于第三方组件的逻辑测试-如elementui"><a href="#_6-对于第三方组件的逻辑测试-如elementui" class="header-anchor">#</a> 📎 6.对于第三方组件的逻辑测试,如elementui</h2> <p><img src="https://img-blog.csdnimg.cn/77cb57c31c294422a4eccf10eed1da19.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <p>对于find和findAll找到的元素统一使用trigger触发事件
+对于findComponent和findAllComponents找到的组件统一使用wrapper.vm.$emit()触发事件</p> <p>方法一:
+对于el-开头的组件使用mount渲染,可以使用find找到根节点元素,然后通过trigger触发事件或者使用findComponentd找到组件,然后通过wrapper.vm.$emit()触发事件</p> <p><img src="https://img-blog.csdnimg.cn/2ebe44272e484b67879c53de95fcc4f7.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <p>如果想stub掉某个子组件,测试它触发的事件,必须使用find或者findAll获取元素,然后使用wrapper.vm.$emit()触发
+<img src="https://img-blog.csdnimg.cn/193c1fa0e1d64a08aa605cf66c1a66a6.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <p>方法二:
+对于el-开头的组件使用shallowMount渲染,需要借用localVue将el组件注入,shallowMount会自动将组件stub,这时只能使用findComponentd找到组件,然后通过wrapper.vm.$emit()触发事件</p> <p><img src="https://img-blog.csdnimg.cn/3a8c41c90045447b89514ad84b6c8e5c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <h2 id="_7-对于引入node-modules依赖的报错"><a href="#_7-对于引入node-modules依赖的报错" class="header-anchor">#</a> 📎 7.对于引入node_modules依赖的报错</h2> <p><img src="https://img-blog.csdnimg.cn/594c7f51dcff4d619ed023045f70a119.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <p>可以通过配置jest.config.js来解决</p> <p><img src="https://img-blog.csdnimg.cn/680aab3426504075b57f21751cfd5cd9.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue/use/vue专家不想让你知道的7个秘密.html" class="prev">
+        📗 vue专家不想让你知道的7个秘密
+      </a></span> <span class="next"><a href="/vue/use/vue的源码学习资料.html">
+        📗 vue的源码学习资料
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.2398fcc2.js" defer></script><script src="/assets/js/2.08c4717b.js" defer></script><script src="/assets/js/1.717facd3.js" defer></script><script src="/assets/js/92.f22be3ac.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>📗 ts使用概要 | 自我学习</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.2cb6b36c.css" as="style"><link rel="preload" href="/assets/js/app.2398fcc2.js" as="script"><link rel="preload" href="/assets/js/2.08c4717b.js" as="script"><link rel="preload" href="/assets/js/1.717facd3.js" as="script"><link rel="preload" href="/assets/js/38.5ccbb6b9.js" as="script"><link rel="prefetch" href="/assets/js/10.ab1e6354.js"><link rel="prefetch" href="/assets/js/11.90426ed2.js"><link rel="prefetch" href="/assets/js/12.32a8b8e2.js"><link rel="prefetch" href="/assets/js/13.bbfe4532.js"><link rel="prefetch" href="/assets/js/14.717cc3eb.js"><link rel="prefetch" href="/assets/js/15.bf4ab80f.js"><link rel="prefetch" href="/assets/js/16.6a8f4294.js"><link rel="prefetch" href="/assets/js/17.a6c5c831.js"><link rel="prefetch" href="/assets/js/18.01a01689.js"><link rel="prefetch" href="/assets/js/19.c981e304.js"><link rel="prefetch" href="/assets/js/20.bf7b8256.js"><link rel="prefetch" href="/assets/js/21.8cb42efd.js"><link rel="prefetch" href="/assets/js/22.a2aed6bb.js"><link rel="prefetch" href="/assets/js/23.2be23482.js"><link rel="prefetch" href="/assets/js/24.ac4d4ce5.js"><link rel="prefetch" href="/assets/js/25.e2e1f370.js"><link rel="prefetch" href="/assets/js/26.4e3cfb67.js"><link rel="prefetch" href="/assets/js/27.560e80b6.js"><link rel="prefetch" href="/assets/js/28.3673389c.js"><link rel="prefetch" href="/assets/js/29.27372479.js"><link rel="prefetch" href="/assets/js/3.418e6c73.js"><link rel="prefetch" href="/assets/js/30.57a27a15.js"><link rel="prefetch" href="/assets/js/31.b8d8e7be.js"><link rel="prefetch" href="/assets/js/32.50831209.js"><link rel="prefetch" href="/assets/js/33.2471604e.js"><link rel="prefetch" href="/assets/js/34.52c4dcd8.js"><link rel="prefetch" href="/assets/js/35.3cc9c7b0.js"><link rel="prefetch" href="/assets/js/36.bed47110.js"><link rel="prefetch" href="/assets/js/37.ff7d3418.js"><link rel="prefetch" href="/assets/js/39.4bc2523a.js"><link rel="prefetch" href="/assets/js/4.c6a9058c.js"><link rel="prefetch" href="/assets/js/40.45422265.js"><link rel="prefetch" href="/assets/js/41.f55febbc.js"><link rel="prefetch" href="/assets/js/42.04d5e38f.js"><link rel="prefetch" href="/assets/js/43.96731499.js"><link rel="prefetch" href="/assets/js/44.cf987bd2.js"><link rel="prefetch" href="/assets/js/45.01b7f31a.js"><link rel="prefetch" href="/assets/js/46.f9121e15.js"><link rel="prefetch" href="/assets/js/47.7f984c64.js"><link rel="prefetch" href="/assets/js/48.67c127cb.js"><link rel="prefetch" href="/assets/js/49.7b2e2ac8.js"><link rel="prefetch" href="/assets/js/5.efd9064c.js"><link rel="prefetch" href="/assets/js/50.19ae3a6f.js"><link rel="prefetch" href="/assets/js/51.821ccae7.js"><link rel="prefetch" href="/assets/js/52.d9b9ab23.js"><link rel="prefetch" href="/assets/js/53.2339ada3.js"><link rel="prefetch" href="/assets/js/54.26b25d9e.js"><link rel="prefetch" href="/assets/js/55.15a7c5fe.js"><link rel="prefetch" href="/assets/js/56.8e6e8bb6.js"><link rel="prefetch" href="/assets/js/57.426da1b8.js"><link rel="prefetch" href="/assets/js/58.13fb31b6.js"><link rel="prefetch" href="/assets/js/59.77c5fae1.js"><link rel="prefetch" href="/assets/js/6.2f9851c5.js"><link rel="prefetch" href="/assets/js/60.850448e1.js"><link rel="prefetch" href="/assets/js/61.f42ec1c5.js"><link rel="prefetch" href="/assets/js/62.f05eadc5.js"><link rel="prefetch" href="/assets/js/63.1547ce9b.js"><link rel="prefetch" href="/assets/js/64.5e93b9b3.js"><link rel="prefetch" href="/assets/js/65.3c7a100f.js"><link rel="prefetch" href="/assets/js/66.9652f8bc.js"><link rel="prefetch" href="/assets/js/67.a08edd43.js"><link rel="prefetch" href="/assets/js/68.7e4f9365.js"><link rel="prefetch" href="/assets/js/69.9fbfdd48.js"><link rel="prefetch" href="/assets/js/7.5559a91f.js"><link rel="prefetch" href="/assets/js/70.df7d8773.js"><link rel="prefetch" href="/assets/js/71.c51b81b4.js"><link rel="prefetch" href="/assets/js/72.1909f421.js"><link rel="prefetch" href="/assets/js/73.ee6d2a50.js"><link rel="prefetch" href="/assets/js/74.a4838fe6.js"><link rel="prefetch" href="/assets/js/75.71f55e2d.js"><link rel="prefetch" href="/assets/js/76.42edf44e.js"><link rel="prefetch" href="/assets/js/77.2c8f191a.js"><link rel="prefetch" href="/assets/js/78.6f6310e9.js"><link rel="prefetch" href="/assets/js/79.937f3f11.js"><link rel="prefetch" href="/assets/js/80.2c1c47ef.js"><link rel="prefetch" href="/assets/js/81.d8b5a0fe.js"><link rel="prefetch" href="/assets/js/82.a0a65a02.js"><link rel="prefetch" href="/assets/js/83.8e6cbffd.js"><link rel="prefetch" href="/assets/js/84.3ec79939.js"><link rel="prefetch" href="/assets/js/85.bd7b361d.js"><link rel="prefetch" href="/assets/js/86.6a4fe77c.js"><link rel="prefetch" href="/assets/js/87.0e96e6a9.js"><link rel="prefetch" href="/assets/js/88.e62f20f2.js"><link rel="prefetch" href="/assets/js/89.5d3e6fe4.js"><link rel="prefetch" href="/assets/js/90.af61d637.js"><link rel="prefetch" href="/assets/js/91.41a07824.js"><link rel="prefetch" href="/assets/js/92.f22be3ac.js"><link rel="prefetch" href="/assets/js/93.ae322daa.js"><link rel="prefetch" href="/assets/js/94.bf90ee3e.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.9170ad82.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2cb6b36c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.webp" alt="自我学习" class="logo"> <span class="site-name can-hide">自我学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工作中常用工具" class="dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工作中常用工具" class="mobile-dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/utils/cmd_cli/" class="nav-link">
+  命令行工具配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/mac_software/" class="nav-link">
+  mac常见软件安装及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/search_skills/" class="nav-link">
+  搜索引擎和github的搜索技巧
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/use/" class="nav-link">
+  node常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/npm_use.html" class="nav-link">
+  npm的常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/packages/minimist/" class="nav-link">
+  好用的node包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue/use/" class="nav-link">
+  Vue常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/Vue/ui/" class="nav-link">
+  Vue常见的UI库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/css/less/" class="nav-link">
+  less
+</a></li><li class="dropdown-item"><!----> <a href="/css/scss/" class="nav-link">
+  scss
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/js/ts/" class="nav-link router-link-active">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          一级标题
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js/test1.html" class="nav-link">
+  2_test1
+</a></li><li class="dropdown-subitem"><a href="/js/test2.html" class="nav-link">
+  2_test2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vscode" class="dropdown-title"><span class="title">Vscode</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vscode" class="mobile-dropdown-title"><span class="title">Vscode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode/use/" class="nav-link">
+  vscode的使用
+</a></li><li class="dropdown-item"><!----> <a href="/vscode/extentions/" class="nav-link">
+  vscode的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Chrome" class="dropdown-title"><span class="title">Chrome</span> <span class="arrow down"></span></button> <button type="button" aria-label="Chrome" class="mobile-dropdown-title"><span class="title">Chrome</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/chrome/use/" class="nav-link">
+  chrome的使用
+</a></li><li class="dropdown-item"><!----> <a href="/chorme/extentions/" class="nav-link">
+  chrome的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/env/" class="nav-link">
+  linux环境的安装
+</a></li><li class="dropdown-item"><!----> <a href="/linux/use/" class="nav-link">
+  linux常用命令
+</a></li></ul></div></div><div class="nav-item"><a href="/future/" class="nav-link">
+  前端趋势
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link">
+  前端面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于我们" class="dropdown-title"><span class="title">关于我们</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于我们" class="mobile-dropdown-title"><span class="title">关于我们</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about_we/about.html" class="nav-link">
+  关于我们
+</a></li><li class="dropdown-item"><!----> <a href="/about_we/contact.html" class="nav-link">
+  联系我们
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工作中常用工具" class="dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工作中常用工具" class="mobile-dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/utils/cmd_cli/" class="nav-link">
+  命令行工具配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/mac_software/" class="nav-link">
+  mac常见软件安装及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/search_skills/" class="nav-link">
+  搜索引擎和github的搜索技巧
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/use/" class="nav-link">
+  node常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/npm_use.html" class="nav-link">
+  npm的常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/packages/minimist/" class="nav-link">
+  好用的node包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue/use/" class="nav-link">
+  Vue常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/Vue/ui/" class="nav-link">
+  Vue常见的UI库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/css/less/" class="nav-link">
+  less
+</a></li><li class="dropdown-item"><!----> <a href="/css/scss/" class="nav-link">
+  scss
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/js/ts/" class="nav-link router-link-active">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          一级标题
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js/test1.html" class="nav-link">
+  2_test1
+</a></li><li class="dropdown-subitem"><a href="/js/test2.html" class="nav-link">
+  2_test2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vscode" class="dropdown-title"><span class="title">Vscode</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vscode" class="mobile-dropdown-title"><span class="title">Vscode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode/use/" class="nav-link">
+  vscode的使用
+</a></li><li class="dropdown-item"><!----> <a href="/vscode/extentions/" class="nav-link">
+  vscode的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Chrome" class="dropdown-title"><span class="title">Chrome</span> <span class="arrow down"></span></button> <button type="button" aria-label="Chrome" class="mobile-dropdown-title"><span class="title">Chrome</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/chrome/use/" class="nav-link">
+  chrome的使用
+</a></li><li class="dropdown-item"><!----> <a href="/chorme/extentions/" class="nav-link">
+  chrome的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/env/" class="nav-link">
+  linux环境的安装
+</a></li><li class="dropdown-item"><!----> <a href="/linux/use/" class="nav-link">
+  linux常用命令
+</a></li></ul></div></div><div class="nav-item"><a href="/future/" class="nav-link">
+  前端趋势
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link">
+  前端面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于我们" class="dropdown-title"><span class="title">关于我们</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于我们" class="mobile-dropdown-title"><span class="title">关于我们</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about_we/about.html" class="nav-link">
+  关于我们
+</a></li><li class="dropdown-item"><!----> <a href="/about_we/contact.html" class="nav-link">
+  联系我们
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Ts</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js/ts/" aria-current="page" class="sidebar-link">📚 目录</a></li><li><a href="/js/ts/ts中any和void和never和unknown的区别.html" class="sidebar-link">📗 any、void、never、unknown的区别</a></li><li><a href="/js/ts/ts使用技巧.html" class="active sidebar-link">📗 ts使用概要</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js/ts/ts使用技巧.html#_1-对于一个变量我希望它既可以是string也可以是number类型-这是就用到了联合类型-用符号-表示" class="sidebar-link">📎 1.对于一个变量我希望它既可以是string也可以是number类型,这是就用到了联合类型 用符号 | 表示</a></li><li class="sidebar-sub-header"><a href="/js/ts/ts使用技巧.html#_2-对于对象需要利用接口-理论上接口形状一旦定义就不能多也不能少-但是可以通过添加-变成可选属性来解决-可选属性的含义是该属性可以不存在" class="sidebar-link">📎 2.对于对象需要利用接口,理论上接口形状一旦定义就不能多也不能少,但是可以通过添加?变成可选属性来解决,可选属性的含义是该属性可以不存在</a></li><li class="sidebar-sub-header"><a href="/js/ts/ts使用技巧.html#_3-数组的定义-类型-或者-使用-接口定义数组" class="sidebar-link">📎 3.数组的定义:==类型+[]==  或者 使用==接口定义数组==</a></li><li class="sidebar-sub-header"><a href="/js/ts/ts使用技巧.html#_4-命名空间" class="sidebar-link">📎 4.命名空间</a></li><li class="sidebar-sub-header"><a href="/js/ts/ts使用技巧.html#_5-函数的定义" class="sidebar-link">📎 5.函数的定义</a></li><li class="sidebar-sub-header"><a href="/js/ts/ts使用技巧.html#_6-泛型" class="sidebar-link">📎 6.泛型</a></li><li class="sidebar-sub-header"><a href="/js/ts/ts使用技巧.html#_7-接口" class="sidebar-link">📎 7.接口</a></li><li class="sidebar-sub-header"><a href="/js/ts/ts使用技巧.html#注-以下都可以-欺骗-编译器跳过语法检查" class="sidebar-link">📎注：以下都可以“欺骗”编译器跳过语法检查</a></li><li class="sidebar-sub-header"><a href="/js/ts/ts使用技巧.html#_8-使用注释屏蔽ts的校验" class="sidebar-link">📎 8.使用注释屏蔽ts的校验</a></li><li class="sidebar-sub-header"><a href="/js/ts/ts使用技巧.html#_9-当你确定一个类型可以使用as语法告诉ts不需要做类型校验了" class="sidebar-link">📎 9.当你确定一个类型可以使用as语法告诉ts不需要做类型校验了</a></li><li class="sidebar-sub-header"><a href="/js/ts/ts使用技巧.html#_10-使用非空断言操作符-排除值为-null-undefined的情况" class="sidebar-link">📎 10.使用非空断言操作符 !排除值为 null undefined的情况</a></li><li class="sidebar-sub-header"><a href="/js/ts/ts使用技巧.html#_11-ts中时间的类型" class="sidebar-link">📎 11.Ts中时间的类型</a></li></ul></li><li><a href="/js/ts/ts使用提示.html" class="sidebar-link">📗 ts使用Tip</a></li><li><a href="/js/ts/ts在vue中的使用.html" class="sidebar-link">📗 vue中使用ts</a></li><li><a href="/js/ts/ts编程资源.html" class="sidebar-link">📗 ts编程库</a></li><li><a href="/js/ts/ts高级使用技巧.html" class="sidebar-link">📗 ts高级使用技巧</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ts使用概要"><a href="#ts使用概要" class="header-anchor">#</a> 📗 ts使用概要</h1> <h2 id="_1-对于一个变量我希望它既可以是string也可以是number类型-这是就用到了联合类型-用符号-表示"><a href="#_1-对于一个变量我希望它既可以是string也可以是number类型-这是就用到了联合类型-用符号-表示" class="header-anchor">#</a> 📎 1.对于一个变量我希望它既可以是string也可以是number类型,这是就用到了联合类型 用符号 | 表示</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>let a:string | number=7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_2-对于对象需要利用接口-理论上接口形状一旦定义就不能多也不能少-但是可以通过添加-变成可选属性来解决-可选属性的含义是该属性可以不存在"><a href="#_2-对于对象需要利用接口-理论上接口形状一旦定义就不能多也不能少-但是可以通过添加-变成可选属性来解决-可选属性的含义是该属性可以不存在" class="header-anchor">#</a> 📎 2.对于对象需要利用接口,理论上接口形状一旦定义就不能多也不能少,但是可以通过添加?变成可选属性来解决,可选属性的含义是该属性可以不存在</h2> <p>这时仍然不允许添加未定义的属性：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>interface IPerson{
+    readonly id: number;
+    name: string;
+    age?: number; 
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="_3-数组的定义-类型-或者-使用-接口定义数组"><a href="#_3-数组的定义-类型-或者-使用-接口定义数组" class="header-anchor">#</a> 📎 3.数组的定义:==类型+[]==  或者 使用==接口定义数组==</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr:number[]=[1,2]
+let arr:string[]=['1','2']
+let arr:boolean[]=[true,false]
+
+interface NumberArray {
+    [index: number]: number;
+}
+let fibonacci: NumberArray = [1, 1, 2, 3, 5];
+
+//对于类数组的定义,如arguments，应该使用接口描述
+function sum() {
+    let args: number[] = arguments; //报错
+}
+
+// Type 'IArguments' is missing the following properties from type 'number[]': pop, push, concat, join, and 24 more.
+
+function sum() {
+    let args: {
+        [index: number]: number;
+        length: number;
+        callee: Function;
+    } = arguments;
+}
+
+//或者
+
+interface Argument {
+    [index: number]: number;
+    length: number;
+    callee: Function;
+}
+function sum() {
+    let args:Argument= arguments;
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><ul><li>3.1 如果数组中既有string，又有number</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr:(string|number)[]=['1234',12]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>3.2.如果数组中即想使用string又想使用number,而且必须限制第一个是string类型，第二个是number类型可以说采用元组</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr:[string,number]=['1',2]
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_4-命名空间"><a href="#_4-命名空间" class="header-anchor">#</a> 📎 4.命名空间</h2> <p>在代码量较大的情况下，为了避免各种变量命名相冲突，可将相似功能的函数、类、接口等放置到命名空间内
+TypeScript的命名空间可以将代码包裹起来，只对外暴露需要在外部访问的对象。</p> <p>命名空间和模块的区别</p> <ul><li>命名空间：内部模块，主要用于组织代码，避免命名冲突。</li> <li>模块：ts外部模块的简称，侧重代码的复用，一个模块里可能会有多个命名空间。</li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// modules/Animal.ts</span>
+<span class="token keyword">export</span> namespace <span class="token constant">A</span> <span class="token punctuation">{</span>
+  <span class="token keyword">interface</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> String<span class="token punctuation">;</span>
+    <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">implements</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> String<span class="token punctuation">;</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">theName</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> theName<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;我是&quot;</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> namespace <span class="token constant">B</span> <span class="token punctuation">{</span>
+  <span class="token keyword">interface</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> String<span class="token punctuation">;</span>
+    <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">implements</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> String<span class="token punctuation">;</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">theName</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> theName<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code> <span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token constant">A</span><span class="token punctuation">,</span> <span class="token constant">B</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./modules/Animal&quot;</span><span class="token punctuation">;</span>
+ <span class="token keyword">let</span> ee <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">A<span class="token punctuation">.</span>Dog</span><span class="token punctuation">(</span><span class="token string">&quot;小贝&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ ee<span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="_5-函数的定义"><a href="#_5-函数的定义" class="header-anchor">#</a> 📎 5.函数的定义</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>function sum(x:number,y:number):number{
+    return x+y
+}
+const sum:(x:number,y:number)=&gt;number=function(x:number,y:number):number{
+    return x+y
+}
+
+interface ISumFn{
+    (x:number,y:number):number
+}
+const sum:ISumFn=(x:number,y:number):number{
+    return x+y
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="_6-泛型"><a href="#_6-泛型" class="header-anchor">#</a> 📎 6.泛型</h2> <ul><li>6.1 泛型中数组的使用</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 写法一：
+function myFun&lt;T&gt;(params: T[]) {
+  return params;
+}
+myFun &lt; string &gt; [&quot;123&quot;, &quot;456&quot;];
+
+// 写法二：
+function myFun&lt;T&gt;(params: Array&lt;T&gt;) {
+  return params;
+}
+myFun &lt; string &gt; [&quot;123&quot;, &quot;456&quot;];
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ul><li>6.2 泛型中类的使用</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 写法一：
+class SelectGirl&lt;T&gt; {
+  constructor(private girls: T[]) {}
+  getGirl(index: number): T {
+    return this.girls[index];
+  }
+}
+
+const selectGirl = new SelectGirl() &lt; string &gt; [&quot;大脚&quot;, &quot;刘英&quot;, &quot;晓红&quot;];
+console.log(selectGirl.getGirl(1));
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><ul><li>6.3 泛型中函数的使用</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>function getDate&lt;T&gt;(value: T): T {
+  return value;
+}
+console.log(getDate&lt;number&gt;(123));
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>6.4 泛型中接口的使用(==tips:接口的泛型只针对函数类型的接口==)</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 写法一:
+interface ConfigFn {
+  //规范参数类型,返回值类型
+  &lt;T&gt;(value: T): T;
+}
+
+let getData: ConfigFn = function &lt;T&gt;(value: T): T {
+  return value;
+};
+
+console.log(getData&lt;string&gt;(&quot;z11&quot;));
+
+// 写法二:
+
+interface ConfigFn&lt;T&gt; {
+  //参数类型 ，返回值类型
+  (value: T): T;
+}
+
+//接口方法
+function getData&lt;T&gt;(value: T): T {
+  return value;
+}
+
+//使用接口
+let myGetDate: ConfigFn&lt;string&gt; = getData;
+console.log(myGetDate(&quot;3&quot;));
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><ul><li>6.5 泛型中多个参数的使用</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>function join&lt;T, P&gt;(first: T, second: P) {
+  return `${first}${second}`;
+}
+join(1, &quot;2&quot;);
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>6.6 泛型约束</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>//方法一： 通过interface使用extends约束
+interface Girl {
+  name: string;
+}
+class SelectGirl&lt;T extends Girl&gt; {
+ ...
+}
+
+// 这句代码的意思是泛型里必须有一个name属性，因为它继承了Girl接口。
+
+//扩展：泛型可以集成多个接口
+class SelectGirl&lt;T extends number | string&gt; {
+  //.....
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><ul><li>6.7 泛型默认类型</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>function createArray&lt;T = string&gt;(length: number, value: T): Array&lt;T&gt; {
+    let result: T[] = [];
+    for (let i = 0; i &lt; length; i++) {
+        result[i] = value;
+    }
+    return result;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ul><li>6.8 类型别名</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>语法： type  类型别名 = 具体类型
+
+type unionTypes = string | number | boolean
+
+let a:unionTypes = 1
+
+//相当于
+
+let a：string | number | boolean = 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="_7-接口"><a href="#_7-接口" class="header-anchor">#</a> 📎 7.接口</h2> <ul><li>7.1 可索引接口</li></ul> <blockquote><p>约束数组</p></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code>  <span class="token keyword">interface</span> <span class="token class-name">Arr</span><span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>index<span class="token operator">:</span>number<span class="token punctuation">]</span><span class="token operator">:</span> string
+  <span class="token punctuation">}</span>
+  <span class="token keyword">let</span> <span class="token literal-property property">arr</span><span class="token operator">:</span>Arr<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><blockquote><p>约束对象</p></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code> <span class="token keyword">interface</span> <span class="token class-name">Obj</span><span class="token punctuation">{</span>
+     <span class="token punctuation">[</span>index<span class="token operator">:</span>string<span class="token punctuation">]</span><span class="token operator">:</span> string
+ <span class="token punctuation">}</span>
+ <span class="token keyword">let</span> <span class="token literal-property property">obj</span><span class="token operator">:</span>Obj<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>7.2 类类型接口</li></ul> <blockquote><p>对类进行约束,类似抽象类的实现</p></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">interface</span> <span class="token class-name">Animals</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+  <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Dogs</span> <span class="token keyword">implements</span> <span class="token class-name">Animals</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">name</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><blockquote><p>接口继承--接口可以继承接口</p></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">interface</span> <span class="token class-name">Dog</span> <span class="token punctuation">{</span>
+  <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">Persons</span> <span class="token keyword">extends</span> <span class="token class-name">Dog</span> <span class="token punctuation">{</span>
+  <span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Cat</span> <span class="token punctuation">{</span>
+  <span class="token function">code</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;猫在敲代码&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//可继承类后再实现接口</span>
+<span class="token keyword">class</span> <span class="token class-name">SuperMan</span> <span class="token keyword">extends</span> <span class="token class-name">Cat</span> <span class="token keyword">implements</span> <span class="token class-name">Persons</span> <span class="token punctuation">{</span>
+  <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> superMan <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SuperMan</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+superMan<span class="token punctuation">.</span><span class="token function">code</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h2 id="注-以下都可以-欺骗-编译器跳过语法检查"><a href="#注-以下都可以-欺骗-编译器跳过语法检查" class="header-anchor">#</a> 📎注：以下都可以“欺骗”编译器跳过语法检查</h2> <h2 id="_8-使用注释屏蔽ts的校验"><a href="#_8-使用注释屏蔽ts的校验" class="header-anchor">#</a> 📎 8.使用注释屏蔽ts的校验</h2> <ul><li>单行忽略</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>// @ts-ignore
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>忽略全文</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>// @ts-nocheck
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>取消忽略全文</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>// @ts-check
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>有时候不想处理不相干的错误</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token literal-property property">num1</span><span class="token operator">:</span> number <span class="token operator">=</span> <span class="token number">100</span>
+num1<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// Error 语法检查错误</span>
+
+<span class="token keyword">const</span> <span class="token literal-property property">num2</span><span class="token operator">:</span> number <span class="token operator">=</span> <span class="token number">200</span>
+<span class="token comment">// @ts-ignore</span>
+num2<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// Ok 语法检查通过</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="_9-当你确定一个类型可以使用as语法告诉ts不需要做类型校验了"><a href="#_9-当你确定一个类型可以使用as语法告诉ts不需要做类型校验了" class="header-anchor">#</a> 📎 9.当你确定一个类型可以使用as语法告诉ts不需要做类型校验了</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>let fn=(test as any).fun
+
+
+interface Waiter {
+  anjiao: boolean;
+  say: () =&gt; {};
+}
+
+interface Teacher {
+  anjiao: boolean;
+  skill: () =&gt; {};
+}
+// 方法一：as
+function judgeWho(animal: Waiter | Teacher) {
+  if (animal.anjiao) {
+    (animal as Teacher).skill();
+  }else{
+    (animal as Waiter).say();
+  }
+}
+
+// 方法二： in
+function judgeWhoTwo(animal: Waiter | Teacher) {
+  if (&quot;skill&quot; in animal) {
+    animal.skill();
+  } else {
+    animal.say();
+  }
+}
+
+// 方法三： typeof
+
+function add(first: string | number, second: string | number) {
+  return first + second;
+}
+
+function add(first: string | number, second: string | number) {
+  if (typeof first === &quot;string&quot; || typeof second === &quot;string&quot;) {
+    return `${first}${second}`;
+  }
+  return first + second;
+}
+
+// 方法四： instanceof
+class NumberObj {
+  count: number;
+}
+
+function addObj(first: object | NumberObj, second: object | NumberObj) {
+  return first.count + second.count;
+}
+
+function addObj(first: object | NumberObj, second: object | NumberObj) {
+  if (first instanceof NumberObj &amp;&amp; second instanceof NumberObj) {
+    return first.count + second.count;
+  }
+  return 0;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br></div></div><h2 id="_10-使用非空断言操作符-排除值为-null-undefined的情况"><a href="#_10-使用非空断言操作符-排除值为-null-undefined的情况" class="header-anchor">#</a> 📎 10.使用非空断言操作符 !排除值为 null undefined的情况</h2> <blockquote><p>即告诉编译器：xx 变量肯定不是 null 或 undefined ，你放心吧～</p></blockquote> <p>==注意: 运行时有可能出错==</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 例子 1</span>
+<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">a</span><span class="token operator">:</span> string <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token operator">|</span> <span class="token keyword">undefined</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> <span class="token literal-property property">s</span><span class="token operator">:</span> string <span class="token operator">=</span> <span class="token string">''</span>
+    s <span class="token operator">=</span> a <span class="token comment">// Error 语法检查失败</span>
+    s <span class="token operator">=</span> a<span class="token operator">!</span> <span class="token comment">// OK —— 【注意】如果 a 真的是 null 或者 undefined ，那么 s 也会是 null 或者 undefined ，可能会带来 bug ！！！</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// fn(null)</span>
+
+<span class="token comment">// 例子 2</span>
+type <span class="token function-variable function">NumGenerator</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> number<span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">myFunc</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">numGenerator</span><span class="token operator">:</span> NumGenerator <span class="token operator">|</span> <span class="token keyword">undefined</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> num1 <span class="token operator">=</span> <span class="token function">numGenerator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Error 语法检查失败</span>
+  <span class="token keyword">const</span> num2 <span class="token operator">=</span> numGenerator<span class="token operator">!</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// OK</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// myFunc(undefined) // 【注意】，如果真的传入 undefined ，也会去执行，当然会执行报错！！！</span>
+
+<span class="token comment">// 例子 3</span>
+<span class="token keyword">let</span> <span class="token literal-property property">a</span><span class="token operator">:</span> number
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// Error - Variable 'n' is used before being assigned.</span>
+<span class="token keyword">let</span> b<span class="token operator">!</span><span class="token operator">:</span> number
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token comment">// OK - `!` 表示，你会给 b 一个赋值，不用编译器关心</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h2 id="_11-ts中时间的类型"><a href="#_11-ts中时间的类型" class="header-anchor">#</a> 📎 11.Ts中时间的类型</h2> <p><img src="https://img-blog.csdnimg.cn/20210329185402197.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <p>相关的继承关系如下:</p> <p><img src="https://img-blog.csdnimg.cn/20210329185338967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/js/ts/ts中any和void和never和unknown的区别.html" class="prev">
+        📗 any、void、never、unknown的区别
+      </a></span> <span class="next"><a href="/js/ts/ts使用提示.html">
+        📗 ts使用Tip
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.2398fcc2.js" defer></script><script src="/assets/js/2.08c4717b.js" defer></script><script src="/assets/js/1.717facd3.js" defer></script><script src="/assets/js/38.5ccbb6b9.js" defer></script>
+  </body>
+</html>

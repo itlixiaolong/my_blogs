@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>📗 linux基本命令操作 | 自我学习</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.2cb6b36c.css" as="style"><link rel="preload" href="/assets/js/app.2398fcc2.js" as="script"><link rel="preload" href="/assets/js/2.08c4717b.js" as="script"><link rel="preload" href="/assets/js/1.717facd3.js" as="script"><link rel="preload" href="/assets/js/59.77c5fae1.js" as="script"><link rel="prefetch" href="/assets/js/10.ab1e6354.js"><link rel="prefetch" href="/assets/js/11.90426ed2.js"><link rel="prefetch" href="/assets/js/12.32a8b8e2.js"><link rel="prefetch" href="/assets/js/13.bbfe4532.js"><link rel="prefetch" href="/assets/js/14.717cc3eb.js"><link rel="prefetch" href="/assets/js/15.bf4ab80f.js"><link rel="prefetch" href="/assets/js/16.6a8f4294.js"><link rel="prefetch" href="/assets/js/17.a6c5c831.js"><link rel="prefetch" href="/assets/js/18.01a01689.js"><link rel="prefetch" href="/assets/js/19.c981e304.js"><link rel="prefetch" href="/assets/js/20.bf7b8256.js"><link rel="prefetch" href="/assets/js/21.8cb42efd.js"><link rel="prefetch" href="/assets/js/22.a2aed6bb.js"><link rel="prefetch" href="/assets/js/23.2be23482.js"><link rel="prefetch" href="/assets/js/24.ac4d4ce5.js"><link rel="prefetch" href="/assets/js/25.e2e1f370.js"><link rel="prefetch" href="/assets/js/26.4e3cfb67.js"><link rel="prefetch" href="/assets/js/27.560e80b6.js"><link rel="prefetch" href="/assets/js/28.3673389c.js"><link rel="prefetch" href="/assets/js/29.27372479.js"><link rel="prefetch" href="/assets/js/3.418e6c73.js"><link rel="prefetch" href="/assets/js/30.57a27a15.js"><link rel="prefetch" href="/assets/js/31.b8d8e7be.js"><link rel="prefetch" href="/assets/js/32.50831209.js"><link rel="prefetch" href="/assets/js/33.2471604e.js"><link rel="prefetch" href="/assets/js/34.52c4dcd8.js"><link rel="prefetch" href="/assets/js/35.3cc9c7b0.js"><link rel="prefetch" href="/assets/js/36.bed47110.js"><link rel="prefetch" href="/assets/js/37.ff7d3418.js"><link rel="prefetch" href="/assets/js/38.5ccbb6b9.js"><link rel="prefetch" href="/assets/js/39.4bc2523a.js"><link rel="prefetch" href="/assets/js/4.c6a9058c.js"><link rel="prefetch" href="/assets/js/40.45422265.js"><link rel="prefetch" href="/assets/js/41.f55febbc.js"><link rel="prefetch" href="/assets/js/42.04d5e38f.js"><link rel="prefetch" href="/assets/js/43.96731499.js"><link rel="prefetch" href="/assets/js/44.cf987bd2.js"><link rel="prefetch" href="/assets/js/45.01b7f31a.js"><link rel="prefetch" href="/assets/js/46.f9121e15.js"><link rel="prefetch" href="/assets/js/47.7f984c64.js"><link rel="prefetch" href="/assets/js/48.67c127cb.js"><link rel="prefetch" href="/assets/js/49.7b2e2ac8.js"><link rel="prefetch" href="/assets/js/5.efd9064c.js"><link rel="prefetch" href="/assets/js/50.19ae3a6f.js"><link rel="prefetch" href="/assets/js/51.821ccae7.js"><link rel="prefetch" href="/assets/js/52.d9b9ab23.js"><link rel="prefetch" href="/assets/js/53.2339ada3.js"><link rel="prefetch" href="/assets/js/54.26b25d9e.js"><link rel="prefetch" href="/assets/js/55.15a7c5fe.js"><link rel="prefetch" href="/assets/js/56.8e6e8bb6.js"><link rel="prefetch" href="/assets/js/57.426da1b8.js"><link rel="prefetch" href="/assets/js/58.13fb31b6.js"><link rel="prefetch" href="/assets/js/6.2f9851c5.js"><link rel="prefetch" href="/assets/js/60.850448e1.js"><link rel="prefetch" href="/assets/js/61.f42ec1c5.js"><link rel="prefetch" href="/assets/js/62.f05eadc5.js"><link rel="prefetch" href="/assets/js/63.1547ce9b.js"><link rel="prefetch" href="/assets/js/64.5e93b9b3.js"><link rel="prefetch" href="/assets/js/65.3c7a100f.js"><link rel="prefetch" href="/assets/js/66.9652f8bc.js"><link rel="prefetch" href="/assets/js/67.a08edd43.js"><link rel="prefetch" href="/assets/js/68.7e4f9365.js"><link rel="prefetch" href="/assets/js/69.9fbfdd48.js"><link rel="prefetch" href="/assets/js/7.5559a91f.js"><link rel="prefetch" href="/assets/js/70.df7d8773.js"><link rel="prefetch" href="/assets/js/71.c51b81b4.js"><link rel="prefetch" href="/assets/js/72.1909f421.js"><link rel="prefetch" href="/assets/js/73.ee6d2a50.js"><link rel="prefetch" href="/assets/js/74.a4838fe6.js"><link rel="prefetch" href="/assets/js/75.71f55e2d.js"><link rel="prefetch" href="/assets/js/76.42edf44e.js"><link rel="prefetch" href="/assets/js/77.2c8f191a.js"><link rel="prefetch" href="/assets/js/78.6f6310e9.js"><link rel="prefetch" href="/assets/js/79.937f3f11.js"><link rel="prefetch" href="/assets/js/80.2c1c47ef.js"><link rel="prefetch" href="/assets/js/81.d8b5a0fe.js"><link rel="prefetch" href="/assets/js/82.a0a65a02.js"><link rel="prefetch" href="/assets/js/83.8e6cbffd.js"><link rel="prefetch" href="/assets/js/84.3ec79939.js"><link rel="prefetch" href="/assets/js/85.bd7b361d.js"><link rel="prefetch" href="/assets/js/86.6a4fe77c.js"><link rel="prefetch" href="/assets/js/87.0e96e6a9.js"><link rel="prefetch" href="/assets/js/88.e62f20f2.js"><link rel="prefetch" href="/assets/js/89.5d3e6fe4.js"><link rel="prefetch" href="/assets/js/90.af61d637.js"><link rel="prefetch" href="/assets/js/91.41a07824.js"><link rel="prefetch" href="/assets/js/92.f22be3ac.js"><link rel="prefetch" href="/assets/js/93.ae322daa.js"><link rel="prefetch" href="/assets/js/94.bf90ee3e.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.9170ad82.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2cb6b36c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.webp" alt="自我学习" class="logo"> <span class="site-name can-hide">自我学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工作中常用工具" class="dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工作中常用工具" class="mobile-dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/utils/cmd_cli/" class="nav-link">
+  命令行工具配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/mac_software/" class="nav-link">
+  mac常见软件安装及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/search_skills/" class="nav-link">
+  搜索引擎和github的搜索技巧
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/use/" class="nav-link">
+  node常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/npm_use.html" class="nav-link">
+  npm的常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/packages/minimist/" class="nav-link">
+  好用的node包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue/use/" class="nav-link">
+  Vue常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/Vue/ui/" class="nav-link">
+  Vue常见的UI库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/css/less/" class="nav-link">
+  less
+</a></li><li class="dropdown-item"><!----> <a href="/css/scss/" class="nav-link">
+  scss
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/js/ts/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          一级标题
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js/test1.html" class="nav-link">
+  2_test1
+</a></li><li class="dropdown-subitem"><a href="/js/test2.html" class="nav-link">
+  2_test2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vscode" class="dropdown-title"><span class="title">Vscode</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vscode" class="mobile-dropdown-title"><span class="title">Vscode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode/use/" class="nav-link">
+  vscode的使用
+</a></li><li class="dropdown-item"><!----> <a href="/vscode/extentions/" class="nav-link">
+  vscode的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Chrome" class="dropdown-title"><span class="title">Chrome</span> <span class="arrow down"></span></button> <button type="button" aria-label="Chrome" class="mobile-dropdown-title"><span class="title">Chrome</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/chrome/use/" class="nav-link">
+  chrome的使用
+</a></li><li class="dropdown-item"><!----> <a href="/chorme/extentions/" class="nav-link">
+  chrome的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/env/" class="nav-link">
+  linux环境的安装
+</a></li><li class="dropdown-item"><!----> <a href="/linux/use/" class="nav-link router-link-active">
+  linux常用命令
+</a></li></ul></div></div><div class="nav-item"><a href="/future/" class="nav-link">
+  前端趋势
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link">
+  前端面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于我们" class="dropdown-title"><span class="title">关于我们</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于我们" class="mobile-dropdown-title"><span class="title">关于我们</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about_we/about.html" class="nav-link">
+  关于我们
+</a></li><li class="dropdown-item"><!----> <a href="/about_we/contact.html" class="nav-link">
+  联系我们
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工作中常用工具" class="dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工作中常用工具" class="mobile-dropdown-title"><span class="title">工作中常用工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/utils/cmd_cli/" class="nav-link">
+  命令行工具配置及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/mac_software/" class="nav-link">
+  mac常见软件安装及使用
+</a></li><li class="dropdown-item"><!----> <a href="/utils/search_skills/" class="nav-link">
+  搜索引擎和github的搜索技巧
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/use/" class="nav-link">
+  node常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/npm_use.html" class="nav-link">
+  npm的常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/node/packages/minimist/" class="nav-link">
+  好用的node包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue/use/" class="nav-link">
+  Vue常见用法
+</a></li><li class="dropdown-item"><!----> <a href="/Vue/ui/" class="nav-link">
+  Vue常见的UI库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/css/less/" class="nav-link">
+  less
+</a></li><li class="dropdown-item"><!----> <a href="/css/scss/" class="nav-link">
+  scss
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/es5/" class="nav-link">
+  ES5
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/js/ts/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><h4>
+          一级标题
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js/test1.html" class="nav-link">
+  2_test1
+</a></li><li class="dropdown-subitem"><a href="/js/test2.html" class="nav-link">
+  2_test2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vscode" class="dropdown-title"><span class="title">Vscode</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vscode" class="mobile-dropdown-title"><span class="title">Vscode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode/use/" class="nav-link">
+  vscode的使用
+</a></li><li class="dropdown-item"><!----> <a href="/vscode/extentions/" class="nav-link">
+  vscode的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Chrome" class="dropdown-title"><span class="title">Chrome</span> <span class="arrow down"></span></button> <button type="button" aria-label="Chrome" class="mobile-dropdown-title"><span class="title">Chrome</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/chrome/use/" class="nav-link">
+  chrome的使用
+</a></li><li class="dropdown-item"><!----> <a href="/chorme/extentions/" class="nav-link">
+  chrome的插件开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/env/" class="nav-link">
+  linux环境的安装
+</a></li><li class="dropdown-item"><!----> <a href="/linux/use/" class="nav-link router-link-active">
+  linux常用命令
+</a></li></ul></div></div><div class="nav-item"><a href="/future/" class="nav-link">
+  前端趋势
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link">
+  前端面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于我们" class="dropdown-title"><span class="title">关于我们</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于我们" class="mobile-dropdown-title"><span class="title">关于我们</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about_we/about.html" class="nav-link">
+  关于我们
+</a></li><li class="dropdown-item"><!----> <a href="/about_we/contact.html" class="nav-link">
+  联系我们
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Use</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/linux/use/" aria-current="page" class="sidebar-link">📚 linux环境使用目录</a></li><li><a href="/linux/use/linux之grep命令.html" class="sidebar-link">📗 linux之grep命令</a></li><li><a href="/linux/use/linux之vim操作.html" class="sidebar-link">📗 linux之vim操作</a></li><li><a href="/linux/use/linux之打包压缩与解压缩.html" class="sidebar-link">📗 linux之打包压缩与解压缩</a></li><li><a href="/linux/use/linux之文件属性和权限操作.html" class="sidebar-link">📗 linux之文件属性和权限操作</a></li><li><a href="/linux/use/linux之文件查找命令.html" class="sidebar-link">📗 linux之文件查找命令</a></li><li><a href="/linux/use/linux之文件查看命令.html" class="sidebar-link">📗 linux之文件查看命令</a></li><li><a href="/linux/use/linux之添加和删除用户.html" class="sidebar-link">📗 linux之添加和删除用户</a></li><li><a href="/linux/use/linux基本命令操作.html" class="active sidebar-link">📗 linux基本命令操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/use/linux基本命令操作.html#_1-grep-some-string-file" class="sidebar-link">📎 1.grep &quot;some string&quot; file</a></li><li class="sidebar-sub-header"><a href="/linux/use/linux基本命令操作.html#_2-cat" class="sidebar-link">📎 2. cat</a></li><li class="sidebar-sub-header"><a href="/linux/use/linux基本命令操作.html#_3-echo" class="sidebar-link">📎 3. echo</a></li><li class="sidebar-sub-header"><a href="/linux/use/linux基本命令操作.html#_3-touch" class="sidebar-link">📎 3. touch</a></li><li class="sidebar-sub-header"><a href="/linux/use/linux基本命令操作.html#_4-tail-somefile" class="sidebar-link">📎 4. tail someFile</a></li><li class="sidebar-sub-header"><a href="/linux/use/linux基本命令操作.html#_5-find-path-name-filename" class="sidebar-link">📎 5. find path -name filename</a></li><li class="sidebar-sub-header"><a href="/linux/use/linux基本命令操作.html#_6-mv-somefile-to-some-other-path" class="sidebar-link">📎 6. mv somefile /to/some/other/path</a></li><li class="sidebar-sub-header"><a href="/linux/use/linux基本命令操作.html#_7-ln-s-真正要打开的文件地址-存放快捷方式的地址" class="sidebar-link">📎 7. ln [-s] 真正要打开的文件地址 存放快捷方式的地址</a></li><li class="sidebar-sub-header"><a href="/linux/use/linux基本命令操作.html#_8-ls-a-d-l-要查看目录" class="sidebar-link">📎 8. ls [-a|d|l]  要查看目录</a></li><li class="sidebar-sub-header"><a href="/linux/use/linux基本命令操作.html#_9-pwd-p-显示目前所在的目录" class="sidebar-link">📎 9. pwd [-P]  显示目前所在的目录</a></li><li class="sidebar-sub-header"><a href="/linux/use/linux基本命令操作.html#_10-获取某个目录下文件的个数" class="sidebar-link">📎10.获取某个目录下文件的个数</a></li></ul></li><li><a href="/linux/use/nginx.html" class="sidebar-link">📗 nginx的使用</a></li><li><a href="/linux/use/shell之awk命令.html" class="sidebar-link">📗 shell之awk命令</a></li><li><a href="/linux/use/shell之case语句.html" class="sidebar-link">📗 shell之case语句</a></li><li><a href="/linux/use/shell之if语句.html" class="sidebar-link">📗 shell之if语句</a></li><li><a href="/linux/use/shell之sed命令.html" class="sidebar-link">📗 shell之sed命令</a></li><li><a href="/linux/use/shell之函数.html" class="sidebar-link">📗 shell之函数</a></li><li><a href="/linux/use/shell之变量.html" class="sidebar-link">📗 shell之变量</a></li><li><a href="/linux/use/shell之循环.html" class="sidebar-link">📗 shell之循环</a></li><li><a href="/linux/use/shell之测试命令.html" class="sidebar-link">📗 shell之测试命令</a></li><li><a href="/linux/use/shell之特殊符号的使用.html" class="sidebar-link">📗 shell之特殊符号的使用</a></li><li><a href="/linux/use/shell之环境变量配置文件.html" class="sidebar-link">📗 shell之环境变量配置文件</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux基本命令操作"><a href="#linux基本命令操作" class="header-anchor">#</a> 📗 linux基本命令操作</h1> <h2 id="_1-grep-some-string-file"><a href="#_1-grep-some-string-file" class="header-anchor">#</a> 📎 1.grep &quot;some string&quot; file</h2> <p>&lt;1&gt; .grep命令在每个文件中搜索模式。它还会寻找由换行符分隔的模式，并且grep打印与模式匹配的每一行。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>grep &quot;react&quot; index.js //在index.js中查找react字符串
+grep -i &quot;React&quot; index.js //在index.js中查找react字符串，忽略大小写
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>&lt;2&gt;.统计文件或者文本中包含匹配字符串的行数 -c</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>grep -c &quot;react&quot; index.js //在index.js中查找react字符串出现的行数
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>&lt;3&gt;.查找文件里头内容不是vhost的字符</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>grep -v &quot;react&quot; index.js //在index.js中查找不是react的字符
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>&lt;4&gt;.在多级目录中对文本进行递归搜索</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>grep vue . -r -n  //在当前目录下搜索包含vue的文件
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>&lt;5&gt;.在nginx.conf下查找mox字符出现的后4行</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>grep -A 4 mox nginx.conf 
+grep -A 4 'vue' main.js 
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>&lt;6&gt;.在nginx.conf下查找mox字符出现的前4行</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>grep -B 4 mox nginx.conf  
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>&lt;7&gt;.在nginx.conf下查找php字符出现的前后4行</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>grep -C 4 mox nginx.conf 
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_2-cat"><a href="#_2-cat" class="header-anchor">#</a> 📎 2. cat</h2> <p>cat命令具有与文本文件有关的三个相关功能：</p> <ul><li>显示它们</li> <li>合并副本</li> <li>创造新的文件</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>cat index.js //读取index.js中的内容
+cat index.js &gt; test.js //把index.js的内容复制到test.js中
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_3-echo"><a href="#_3-echo" class="header-anchor">#</a> 📎 3. echo</h2> <p>echo用于向终端输出文本</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>echo &quot;test text&quot;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_3-touch"><a href="#_3-touch" class="header-anchor">#</a> 📎 3. touch</h2> <p>touch用于创建新的空文件</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>touch text.js
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="以下是cat和touch之间的主要区别"><a href="#以下是cat和touch之间的主要区别" class="header-anchor">#</a> 以下是cat和touch之间的主要区别：</h3> <ul><li>cat 用于创建包含内容的文件。</li> <li>touch 创建一个没有任何内容或空文件的文件。请记住，使用touch命令创建的文件为空。当用户在创建文件时没有要存储的数据时，此命令很有用。</li></ul> <h2 id="_4-tail-somefile"><a href="#_4-tail-somefile" class="header-anchor">#</a> 📎 4. tail someFile</h2> <p>tail命令读取文件并输出文件的最后部分（尾巴）</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>tail text.js
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_5-find-path-name-filename"><a href="#_5-find-path-name-filename" class="header-anchor">#</a> 📎 5. find path -name filename</h2> <p>使用find命令可以快速查找文件或目录。当您正在处理包含数百个文件和多个目录的大型项目时，此功能非常有用</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>find . -name text.js //在当前目录下查找text.js
+find . -name &quot;*.js&quot; //在当前目录下查找所有的js文件
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="_6-mv-somefile-to-some-other-path"><a href="#_6-mv-somefile-to-some-other-path" class="header-anchor">#</a> 📎 6. mv somefile /to/some/other/path</h2> <p>mv命令将文件或目录从一个位置移动到另一个位置。mv命令支持移动单个文件，多个文件和目录</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mv index.js ../utils  //把当前目录下的index.js移动到上一级的utils目录下
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_7-ln-s-真正要打开的文件地址-存放快捷方式的地址"><a href="#_7-ln-s-真正要打开的文件地址-存放快捷方式的地址" class="header-anchor">#</a> 📎 7. ln [-s] 真正要打开的文件地址 存放快捷方式的地址</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;!--为/etc/hosts文件创建一个软链接到~/hosts目录下,这时执行cd ~/hosts实际就会打开 cd /etc/hosts--&gt;
+ln -s /etc/hosts ~/hosts 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_8-ls-a-d-l-要查看目录"><a href="#_8-ls-a-d-l-要查看目录" class="header-anchor">#</a> 📎 8. ls [-a|d|l]  要查看目录</h2> <ul><li>-a ：全部的文件，连同隐藏文件( 开头为 . 的文件) 一起列出来(常用)</li> <li>-d ：仅列出目录本身，而不是列出目录内的文件数据(常用)</li> <li>-l ：长数据串列出，包含文件的属性与权限等等数据；(常用)</li> <li>-h ：文件大小达到M级别后,以M为单位进行显示</li> <li>-r : 逆序显示</li> <li>-t : 按时间顺序显示</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;!--查看home目录下的所有文件--&gt;
+ls -a ~ 
+&lt;!--查看home目录下的所有文件,包含文件的属性与权限等等数据--&gt;
+ls -l ~  
+&lt;!--查看home目录下的所有文件只包括文件夹--&gt;
+ls -d ~  
+&lt;!--也可以组合使用--&gt;
+ls -al ~  
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="_9-pwd-p-显示目前所在的目录"><a href="#_9-pwd-p-显示目前所在的目录" class="header-anchor">#</a> 📎 9. pwd [-P]  显示目前所在的目录</h2> <ul><li>-P ：显示出确实的路径，而非使用连结 (link) 路径</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;!--单纯显示出目前的工作目录--&gt;
+[root@www ~]# pwd
+/root   
+&lt;!--实例显示出实际的工作目录，而非连结档本身的目录名而已--&gt;
+[root@www ~]# cd /var/mail   &lt;==注意，/var/mail是一个连结档
+[root@www mail]# pwd
+/var/mail         &lt;==列出目前的工作目录
+[root@www mail]# pwd -P
+/var/spool/mail   &lt;==怎么回事？有没有加 -P 差很多～
+[root@www mail]# ls -ld /var/mail
+lrwxrwxrwx 1 root root 10 Sep  4 17:54 /var/mail -&gt; spool/mail
+&lt;!--看到这里应该知道为啥了吧？因为 /var/mail 是连结档，连结到 /var/spool/mail --&gt;
+&lt;!--所以，加上 pwd -P 的选项后，会不以连结档的数据显示，而是显示正确的完整路径啊！ --&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="_10-获取某个目录下文件的个数"><a href="#_10-获取某个目录下文件的个数" class="header-anchor">#</a> 📎10.获取某个目录下文件的个数</h2> <ul><li>如果只是想得到当前目录下（不包括子目录）的相关文件时用</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>ls -l | grep &quot;^-&quot; | wc -l 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>或者</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>find ./ -maxdepth 1 -type f | wc -l  
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>其中-maxdepth 1用于指定一层</p> <ul><li>如果想得到当前目录下，包括子目录中的相关文件时用</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>find ./ -type f | wc -l
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/linux/use/linux之添加和删除用户.html" class="prev">
+        📗 linux之添加和删除用户
+      </a></span> <span class="next"><a href="/linux/use/nginx.html">
+        📗 nginx的使用
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.2398fcc2.js" defer></script><script src="/assets/js/2.08c4717b.js" defer></script><script src="/assets/js/1.717facd3.js" defer></script><script src="/assets/js/59.77c5fae1.js" defer></script>
+  </body>
+</html>
